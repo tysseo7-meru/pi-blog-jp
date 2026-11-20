@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Linux版ノードの公開と、プロトコル23への更新予告 | Pi公式ブログ 日本語まとめ（2025年・2026年）</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index.html">← 一覧へ戻る</a></p>
+<h1>Linux版ノードの公開と、プロトコル23への更新予告</h1>
+<div class="meta">
+<p>公開日：2025年8月27日</p>
+<p>カテゴリ：お知らせ、一般</p>
+<p>元の英語タイトル：Linux Node Release and Upcoming Protocol Upgrades</p>
+<p><a href="https://minepi.com/blog/pi-linux-node/">原文（英語）</a></p>
+</div>
+<div class="note"><p>このページは、Pi Network公式ブログの記事を平たい日本語で要約したものである。全文の翻訳ではない。正確な表現は<a href="https://minepi.com/blog/pi-linux-node/">原文（英語）</a>を確認してほしい。</p></div>
+<h2>Linux版ノードの公開</h2>
+<p>Piの仕組みは、Linux版のNode（ノード、ネットワークを支えるプログラム）を公開した。NodeはPiの分散した土台の背骨であり、MacとWindowsを超えてNodeへの対応を広げることは、ネットワークの回復力と適応力を強くする。</p>
+<p>取引所を含む提携先やサービスにとって、Linux版Nodeの公開はすぐに意味を持つ。これらの組織の多くは、すでにPiにつなぐために独自のLinuxを基盤とするNodeを動かしている。公式のLinux版Nodeの公開により、提携先やサービスは、標準化されたNodeのソフトウェアへ移ることができる。ここで得られる主な利点は、LinuxのNodeの運用者が、プロトコルの更新を自分で管理したり、Pi Networkからの自動更新を有効にしたりでき、将来の版に無理なく最新の状態を保てることである。これは、現在の独自の作り方への依存に代わり、より安定して一貫した仕組みを作る。</p>
+<p>パイオニアにとって、Linux版Nodeは、過去数年にわたってコミュニティから頻繁に求められてきた機能である。Nodeの報酬に直接つながるものではないため、日々の参加にすぐに影響しない場合があるが、この更新により、利用しやすさと仕組みへの参加が広がる。その意味は土台にある。Linuxに対応することで、ネットワークは開発者、技術に詳しいパイオニア、オープンソース（公開された設計）の環境を通して貢献したい人々にとって、より開かれたものになる。</p>
+<p>インストールの手順は、公式の案内で確認できる。</p>
+<h2>プロトコル・バージョン23への更新が近づいている</h2>
+<p>Linux版Nodeの公開と並行して、Pi Networkは重要な更新を準備している。プロトコル（通信の決まり）のバージョン19からバージョン23への移行である。PiのプロトコルはStellarのプロトコルをもとに作られている。この版は、Stellarのプロトコルのバージョン23からの更新を取り入れた土台の上に作られた、Pi独自のプロトコルであり、新しい水準の機能と制御を可能にする。今後のプロトコルの更新は、連続する版を通して段階的に入り、ブロックチェーンのサービスに計画的な停止が必要になる場合がある。このような更新を事前に発表するのは、提携先、外部のサービス、コミュニティが前もって備える助けにするためである。</p>
+<p>展開は、注意深いテストのために段階的に行われる。</p>
+<ul><li>Testnet1（テスト用ネットワーク1）の更新は今週始まり、今後数週間続く。なお、Testnet1のプロトコル更新の期間中、Testnet1のブロックチェーンに小さな停止が起きる場合がある。PiはTestnet1向けの新しいコミュニティNodeの入れ物を配布し、利用者が行う必要のある操作はない。</li><li>Testnet1の更新が完了した後の数週間で、Testnet2とMainnet（本番ネットワーク）が段階的に入り、仕組み全体がバージョン23になる。なお、更新の期間中に個別の停止が起きる場合があり、それは提携先とパイオニアに事前に発表される。中央集権型取引所（CEX、会社が運営する取引所）のような外部のサービスのサイトで、この更新の処理のために、Piの利用に短い停止が起きる場合もある。</li></ul>
+<p>KYC（本人確認）を受けたブロックチェーンは、利用者同士の法令に沿ったやり取りにおいて、追加の使い道を開く。Pi Networkは、数千万のKYC済みアカウントを持つ、代表的なKYC確認済みブロックチェーンの1つとして引き続き運営されるが、その確認が強制される方法は変わりつつある。プロトコルの更新により、この強制はブロックチェーンのプロトコル自体によって直接行われるようになる。重要なのは、この更新により、KYCの権限を分散できるようになることである。</p>
+<p>Pi独自のKYCの仕組みは引き続きパイオニアを確認するが、プロトコルは将来、KYCの権限を他の信頼できる組織に割り当てることも可能にする。これにより、プロトコルの水準で法令への対応を保ちながら、より分散し、コミュニティが主導するKYCの流れが提供される。</p>
+<p>念のため述べると、KYCによる本人確認は、ネットワークの健全さ、法令への対応、本人確認を必要とするサービスによる連携への備えにとって重要である。KYCで確認されたブロックチェーンのネットワークを作るという、数年前からのPiの先行する考え方と、Pi Mainnetブロックチェーン上で移行しKYCで確認された1482万人を超える人々という実現は、今では、公開ネットワーク上のトークンに本人確認と法令対応の仕組みを直接組み込むERC-3643のような、確認済みで許可制の基準に向けた業界の最近の動きにも表れている。</p>
+<p class="small"><a href="index.html">← 一覧へ戻る</a>／<a href="https://minepi.com/blog/pi-linux-node/">原文（英語）</a></p>
+</main>
+</body>
+</html>

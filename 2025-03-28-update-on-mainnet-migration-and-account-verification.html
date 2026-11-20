@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>電話番号からメールによる二要素認証へ移り、移行が再開 | Pi公式ブログ 日本語まとめ（2025年・2026年）</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index.html">← 一覧へ戻る</a></p>
+<h1>電話番号からメールによる二要素認証へ移り、移行が再開</h1>
+<div class="meta">
+<p>公開日：2025年3月28日</p>
+<p>カテゴリ：更新情報</p>
+<p>元の英語タイトル：Update On Mainnet Migration and Account Verification</p>
+<p><a href="https://minepi.com/blog/update-on-mainnet-migration-and-account-verification/">原文（英語）</a></p>
+</div>
+<div class="note"><p>このページは、Pi Network公式ブログの記事を平たい日本語で要約したものである。全文の翻訳ではない。正確な表現は<a href="https://minepi.com/blog/update-on-mainnet-migration-and-account-verification/">原文（英語）</a>を確認してほしい。</p></div>
+<p>これまで、Piのアカウントは、メールアドレスではなく電話番号を、利用者を区別するものとして頼ってきた。当初は便利であったが、この方法は課題を生んだ。SMS（電話番号による短いメッセージ）による確認は、確実ではなく、費用もかかることが明らかになったためである。Piコミュニティが世界に分散している性質上、通信規制の地理的な制限の違い、通信事業者の方針、個人のサービスの契約と費用などにより、パイオニアとサーバーの間のSMS通信は常にうまくいくとは限らなかった。</p>
+<p>これらの課題を踏まえ、ネットワークがKYC（本人確認）やライブネスチェック（本人がその場にいることを確かめる確認）のような、より確実な本人らしさの手段を持つ段階にあることから、主に、あるいは専ら電話番号に頼ることから、メールによる二要素認証（2FA、通常の確認に加えてもう1段階の確認を行う仕組み）による確認へ移る時機である。最終的には、パスキー（パスワードの代わりに使う鍵の仕組み）や生体認証（指紋や顔などによる確認）のような進んだ認証方法に対応することを目指す。メールによる2FA確認は、上記の課題に対処するだけでなく、二要素であることにより安全性も高める。</p>
+<p>そこへ至るには、全ての利用者がまず、登録された信頼できるメールアドレスを整える必要がある。しかし、一部の利用者はアカウントにメールアドレスを加えたことがなかったり、間違ったものを入力したり、過去のメールアドレスを使えなくなったり、家族のPiアカウントとメールアドレスを共有したりしている場合がある。</p>
+<p>メールアドレスをPiアカウントに加えることは、アカウント作成時には行われず、これはアカウント管理と安全性における大きな移行であるため、Piは、利用者が移行できるようにする前に、追加の分析を通じて確認しなければならなかった。利用者がどのように信頼できるメールアドレスを加えたか、どのようにメールアドレスを確認したか、どのように2FAを完了したかなどであり、これらの過程の完全さと利用者アカウントの安全性を確かなものにするためである。場合によっては、ライブネスチェックや追加のSMS確認のような、さらなる行動が必要である。これには、そのようなシステム水準の点検が行われるまで、移行の一時停止が必要であった。</p>
+<p>良い知らせとして、移行は今再開しており、より多くのメールによる2FAとシステム水準の点検が完了するにつれて、段階的に広がっていく。Pi Networkは、円滑で安全な移行に力を入れており、全ての人のアカウントの安全性が強められる間の忍耐に感謝するとしている。</p>
+<p class="small"><a href="index.html">← 一覧へ戻る</a>／<a href="https://minepi.com/blog/update-on-mainnet-migration-and-account-verification/">原文（英語）</a></p>
+</main>
+</body>
+</html>

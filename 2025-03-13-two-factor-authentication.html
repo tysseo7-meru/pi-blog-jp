@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>移行用ウォレットの二要素認証で、口座の安全を守る | Pi公式ブログ 日本語まとめ（2025年・2026年）</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index.html">← 一覧へ戻る</a></p>
+<h1>移行用ウォレットの二要素認証で、口座の安全を守る</h1>
+<div class="meta">
+<p>公開日：2025年3月13日</p>
+<p>カテゴリ：一般、更新情報</p>
+<p>元の英語タイトル：Two-Factor Authentication For Pi Migration Wallet Helps Ensure Pioneer Account Security</p>
+<p><a href="https://minepi.com/blog/two-factor-authentication/">原文（英語）</a></p>
+</div>
+<div class="note"><p>このページは、Pi Network公式ブログの記事を平たい日本語で要約したものである。全文の翻訳ではない。正確な表現は<a href="https://minepi.com/blog/two-factor-authentication/">原文（英語）</a>を確認してほしい。</p></div>
+<p>2025年3月13日、Pi Networkは二要素認証（2FA、通常の確認に加えてもう1段階の確認を行う仕組み）の機能を公開した。一部のパイオニアは、Piがメインネット（本番ネットワーク）のブロックチェーンへ無事に移行される前に、2FAを終える必要がある。この機能は、信頼できるメールアドレスの確認を通じて、パイオニアのPi Walletを守り確認するものであり、パイオニアの口座とそのPiの安全を支える。</p>
+<p>一部のパイオニアはすでに、移行用ウォレットを確認するための2FAを始めるのに使える信頼できるメールアドレスを持っており、他のパイオニアは、ウォレットを確認するための2FAを終える前に、信頼できるメールアドレスを設定する必要がある。信頼できるメールアドレスの設定は、そのメールアドレスが口座の所有者によって提供されたことを確実にするためのライブネスチェック（本人がその場にいることを確認する検査）を終えることで行われる。そのための案内がマイニングアプリに表示される。現在、信頼できるメールアドレスを追加できるのは、KYC（本人確認）を終えたパイオニア（暫定的なKYCを含む）だけである。信頼できるメールアドレスは、口座の復旧など、他の重要な口座確認にも使われる。そのため、自分が所有し信頼するメールアドレスを追加することが不可欠である。アクセスできない適当なメールアドレスを提供すると、確認を終えられなくなる。その結果、将来、Piを移行するためにウォレットを確認できなくなったり、口座を復旧できなくなったりする。</p>
+<p>信頼できるメールアドレスが追加されると、それらのパイオニアは、マイニングの回が終わった後に少しずつ案内を受け取り、場合によってはメールの通知も受け取り、移行用ウォレットを確認するための2FAを終えるよう求められる。あるいは、パイオニアはメインネット・チェックリストを通じて2FAのウォレット確認を終えることもできる。</p>
+<p>2FAの画面では、パイオニアは移行用ウォレットへのアクセスを確認しなければならず（または新しいウォレットを作って変更し）、その後に、この確認を検証するための別のメールを受け取る。</p>
+<p>パイオニアが受け取るメールは「[email protected]」からのものだけである。フィッシング（偽の画面やメールで情報をだまし取る手口）や詐欺の試みを避けるため、他のどのメールも信用してはならない。</p>
+<h2>移行の保留期間中に返却されるPi残高</h2>
+<p>口座とPiの安全のため、過去数週間にPiをメインネットへ移行したが、まだ14日間の保留期間の中にいる特定のパイオニアは、上記の2FAの要件を終える必要がある。終えなければ、そのPiはマイニングアプリへ安全に戻される。移行後の14日間の保留期間の設計は、まさにこのような目的のためでもあった。これらのパイオニアが2FAを終えると、元の残高、またはわずかに多い残高の移行が、メインネット・ブロックチェーンへ向けて再び列に入れられる。</p>
+<p>2FAとPiの「返却」の機能は、パイオニアのPiと口座の安全を、できる限り確保するためのものである。取引が変更できず、Pi Walletが非管理型（資産を自分で管理する形）であるというブロックチェーンの性質のため、これらの機能はさらなる慎重さを提供し、Piが正当なウォレットの所有者へ送られることを確実にする。</p>
+<p>返却の前に2FAを終えたパイオニアは、Piの返却の対象にならない。2FAが終わると、移行が一時停止されPiが返却されたパイオニアは、その移行が再び開始される。</p>
+<p>Piの返却とメインネット移行の過程についての重要な注意は、次のとおりである。</p>
+<ul><li>14日間の保留期間は、Piが凍結され、メインネット・ブロックチェーン上で使えなくなる期間であり、移行の過程の不可欠な部分である。その理由の1つは、メインネット・ブロックチェーン上で永久に取り消せなくなる前に、パイオニアのPiの安全と移行の正確さを確保する時間を与えるためである</li><li>Piが返却された一部のパイオニアは、移行されたPi残高が「移行可能残高」ではなく「未確認残高」に戻されるのを見る場合がある。これは、移行可能残高に表示される金額が画面表示のための控えめな見積もりであるのに対し、移行中の実際の移行額は、通常は計算に長い時間がかかる高度な計算を経るためである。これにより、パイオニアが次の移行で受け取るPiの量が減ることはない。移行が無事に終わった後、パイオニアは元の移行額と同じ量のPi（または、含まれるマイニングの回が増えたため、わずかに多い量）を受け取る</li></ul>
+<p>ウォレット確認のための2FAの要件と、14日間の期間中の一部の口座に対するPiの返却により、流通量が下がる場合がある。しかし、より多くのPiが再び列に入れられ、再び移行されるにつれて、流通量はそれに応じて変わる。</p>
+<p>メインネット・チェックリストのすべての手順を終え、移行の過程の完了を待っている場合は、信頼できるメールアドレスを追加し、案内を受け取ったらできるだけ早く2FAを終える必要がある。</p>
+<p class="small"><a href="index.html">← 一覧へ戻る</a>／<a href="https://minepi.com/blog/two-factor-authentication/">原文（英語）</a></p>
+</main>
+</body>
+</html>
