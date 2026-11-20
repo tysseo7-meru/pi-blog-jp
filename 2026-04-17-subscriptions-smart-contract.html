@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Testnetで定期支払いのスマートコントラクト機能が始まった | Pi公式ブログ2026 日本語まとめ</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index.html">← 一覧へ戻る</a></p>
+<h1>Testnetで定期支払いのスマートコントラクト機能が始まった</h1>
+<div class="meta">
+<p>公開日：2026年4月17日</p>
+<p>カテゴリ：お知らせ、開発者向け</p>
+<p>元の英語タイトル：Introducing Subscription Smart Contract Capability on Testnet</p>
+<p><a href="https://minepi.com/blog/subscriptions-smart-contract/">原文（英語）</a></p>
+</div>
+<div class="note"><p>このページは、Pi Network公式ブログの記事を平たい日本語で要約したものである。全文の翻訳ではない。正確な表現は<a href="https://minepi.com/blog/subscriptions-smart-contract/">原文（英語）</a>を確認してほしい。</p></div>
+<p>Pi Networkは、Pi Testnet（試験用のネットワーク）で最初のスマートコントラクト（条件に応じて自動で実行されるプログラム）機能として、定期支払いへの対応を開始した。</p>
+<p>定期支払い（サブスクリプション）は現代社会のサービスで最も一般的なビジネスモデルの一つであるが、ブロックチェーン（取引記録を改ざんしにくい形で分散して残す技術）の仕組みでは実現が難しかった。Piのスマートコントラクト機能を使って定期支払いを仕組みに持ち込むことで、Piは、電子商取引、動画などの配信、オンラインツールなど、実際の製品や繰り返し使われる実用中心のサービスに直接つながる利用場面を育てている。</p>
+<p>これは、スマートコントラクト機能のためにブロックチェーンを準備した最近のノード（ネットワークに参加するコンピュータ）とプロトコル（通信や処理の決まり）の更新に続くものである。あわせて、開発者がブロックチェーンのデータと関わり、アプリの流れを試す実際的な方法を提供したPi Testnet RPCサーバー（外部からブロックチェーンに問い合わせるための中継サーバー）の公開にも続くものである。</p>
+<p>定期支払いのスマートコントラクトを技術的な確認とコミュニティの意見に開くため、Piは2番目のPi Request for Comment（PiRC2、設計への意見募集文書）を公開した。</p>
+<p>PiRC2により、開発者やその他の確認者は設計を詳しく調べ、不具合や見落としやすい特殊な場合があれば見つけ、改善案を出せる。また、Mainnet（本番のネットワーク）への展開前に、仕組み全体で契約を評価する方法にもなる。</p>
+<p>スマートコントラクト自体も、外部の監査サービスによる確認を受けている。</p>
+<h2>定期支払いのスマートコントラクトの仕組み</h2>
+<p>定期支払いのスマートコントラクトは、開発者や事業者が定期的なサービスのモデルをアプリや地元の商取引に組み込む方法を提供する。支払いはブロックチェーンを通じて処理され、加入者は資金への管理権を保つ。</p>
+<p>設計の重要な部分は、加入者が契約に使える決められた予算を承認でき、請求のたびに再び署名する必要がない点である。その承認は、決められた請求期間に限ることもできる。例えば、最長1年間の毎月の請求などである。同時に、承認された資金は、実際に請求が処理されるまでウォレット（デジタル資産を保管する仕組み）の中に残る。請求の期限が来たときにウォレットに十分な残高があれば、予算全額を事前に拘束しなくても、定期支払いは有効なままになる。</p>
+<p>これにより、この契約は、ブロックチェーンの仕組みが本来守るべきウォレット側の管理権を手放したり、予算総額を契約へ送ったりすることなく、繰り返しの支払いに対応できる。</p>
+<h2>技術的な工夫</h2>
+<p>定期支払いはブロックチェーンでは新しい発想ではないが、これまでは通常、ブロックチェーン上での妥協を伴ってきた。例えば、他のブロックチェーンでは繰り返し支払いのための標準案が提案されてきたが、それらの方法は一般に、チェーン外での調整、繰り返しの承認、追加のアカウント基盤といった妥協を伴ってきた。</p>
+<p>Piのモデルは異なる方法を取る。請求のたびに新しい署名を必要とせずに定期支払いが動くように設計され、同時に、承認された資金は実際の請求が起きるまで加入者のウォレットの中に残る。これはWeb3（ブロックチェーンを基盤とする分散型のウェブの考え方）における意味のある設計上の選択である。Web3では、繰り返し支払いは、摩擦、前払い、追加の基盤を加えずにすっきり実現することが難しいことが多かったためである。</p>
+<h2>開発者向け：定期支払いを試し、PiRC2を確認する</h2>
+<p>定期支払いの機能は、Pi上のスマートコントラクトがどのように開発され、試されるかの早期の姿を示す。この段階では、技術的な確認、不具合の発見、コマンドライン（文字で命令を入力する操作画面）とバックエンド（裏側の処理）での実験に焦点が置かれている。</p>
+<p>PiRC2が公開された今、開発者には、定期支払い契約の設計を確認し、不具合や見落としやすい特殊な場合を表面化させ、改善案を出すことが呼びかけられている。</p>
+<p>原文の脚注では、繰り返しの定期支払いは他のブロックチェーンの仕組みでも探られてきたが、複雑さが増すことが多かったと説明されている。例として、Ethereumでは、EIP-1337が、署名された定期支払いデータをチェーン外に保存し、後から実行のために提出する「ブロックチェーン上の定期支払い」を提案したこと、ERC-4337のアカウント抽象化（アカウントの仕組みを柔軟にする考え方）が、より上位の層のスマートアカウント基盤に明示的に頼っていることが挙げられている。</p>
+<p class="small"><a href="index.html">← 一覧へ戻る</a>／<a href="https://minepi.com/blog/subscriptions-smart-contract/">原文（英語）</a></p>
+</main>
+</body>
+</html>

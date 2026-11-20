@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pi Desktop 0.6.3のSoloHost更新：アプリの見つけやすさ、安定性、開発者向け道具を改善する | Pi公式ブログ2026 日本語まとめ</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index.html">← 一覧へ戻る</a></p>
+<h1>Pi Desktop 0.6.3のSoloHost更新：アプリの見つけやすさ、安定性、開発者向け道具を改善する</h1>
+<div class="meta">
+<p>公開日：2026年9月9日</p>
+<p>カテゴリ：開発者向け、更新情報</p>
+<p>元の英語タイトル：SoloHost Updates in Pi Desktop Version 0.6.3: Improved App Discovery, Reliability, and Developer Tools</p>
+<p><a href="https://minepi.com/blog/solohost-pi-desktop-0-6-3/">原文（英語）</a></p>
+</div>
+<div class="note"><p>このページは、Pi Network公式ブログの記事を平たい日本語で要約したものである。全文の翻訳ではない。正確な表現は<a href="https://minepi.com/blog/solohost-pi-desktop-0-6-3/">原文（英語）</a>を確認してほしい。</p></div>
+<p>SoloHost（自分で運用するアプリをPi Desktopから入れて動かせる仕組み）の更新が、Pi Desktopのバージョン0.6.3とあわせて出された。内容は、アプリの発見と管理の改善、アプリの安定性の改善、SoloHostアプリを作り問題を調べるための開発者向け道具の改善である。</p>
+<p>なお、バージョン0.6.3からは、これらの公開をPi NodeバージョンではなくPi Desktopバージョンと呼ぶことになる。</p>
+<h2>Pi Desktop 0.6.3に含まれるSoloHostの更新内容</h2>
+<ul><li>実行中の人数に基づくSoloHostアプリの順位付け：コミュニティのSoloHostアプリは、今そのアプリを動かしている人の数に基づいて順位付けされるようになった。これにより、SoloHostの中で活発なコミュニティアプリが目立つようになり、パイオニア（Piの利用者）が他の人が実際に使っているアプリを見つけやすくなる</li><li>新しい「My Apps」の欄：SoloHostのホーム画面に新しい「My Apps」の欄が加わり、今の利用者が公開したアプリが表示される。開発者や公開者に、自分のSoloHostアプリを見つけて管理するための専用の場所ができる</li><li>SoloHostアプリの準備確認（レディネス・プローブ）：準備確認はSoloHostアプリの状態を確認し、接続などの問題で時々起きる502エラー（サーバー側の応答エラーの一種）を避ける助けになる。これにより、アプリが準備できて正しく応答しているかをSoloHostがよりよく判断でき、アプリ体験の安定性が高まる</li><li>問題調べのためのDocker Compose対応の改善：コマンドライン（文字で命令を入力する画面）で作業したい技術的な利用者は、インストール先のフォルダへ移動し、SoloHostの外で標準のdocker compose upとdocker compose downの命令を実行できる。これにより、コンテナ（アプリを隔離して動かす箱）の開始と停止を試し、必要なときに問題を調べる別の方法ができる</li><li>新しいSoloHost開発者向け契約（コントラクト）：開発者がSoloHostアプリを作る助けになる、最初のSoloHostリポジトリ（ファイル置き場）が用意された。このリポジトリはAIエージェント（AIが自律的に作業する仕組み）が理解しやすい形になっており、AIが開発者のSoloHostアプリ作成をより効果的に助けられる</li><li>不具合の修正：SoloHostログイン用トークンの修正と、長いイメージ名の表示の修正が含まれる</li></ul>
+<p>SoloHostログイン用トークンの修正では、Pi Desktopを何日も動かしたままにするとSoloHostのログイン用トークン（ログイン状態を示す符号）の有効期限が切れてしまう問題を直した。長いイメージ名の表示の修正では、長いイメージ名が表示枠からはみ出してしまう表示上の問題を直し、正しく折り返すようにした。原文ではこの2件の修正が一覧の中と、その直後で重ねて説明されている。</p>
+<p>これらの更新を合わせると、仕組みに自分で運用するアプリが増える中でSoloHostが強くなる。アプリの見つけやすさと安定性が高まれば、パイオニアが役立つアプリを見つけて動かしやすくなり、新しい開発者向け資料や問題調べの選択肢があれば、開発者がSoloHost向けのアプリを簡単に作り続けていける。</p>
+<p>これらの改善は、Pi Desktopとノード（ネットワークを支えるコンピューター）の実用性をブロックチェーンの土台を超えて広げるというSoloHostのより大きな役割を支えるものであり、パイオニアに自分のコンピューターを自分で運用するアプリに使う方法を増やし、開発者にSoloHostへアプリを作って持ち込む道具を増やすものである。</p>
+<p class="small"><a href="index.html">← 一覧へ戻る</a>／<a href="https://minepi.com/blog/solohost-pi-desktop-0-6-3/">原文（英語）</a></p>
+</main>
+</body>
+</html>

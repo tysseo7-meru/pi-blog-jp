@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piノードで分散コンピューティング：OpenMindとの実証実験 | Pi公式ブログ2026 日本語まとめ</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index.html">← 一覧へ戻る</a></p>
+<h1>Piノードで分散コンピューティング：OpenMindとの実証実験</h1>
+<div class="meta">
+<p>公開日：2026年3月5日</p>
+<p>カテゴリ：開発者向け、更新情報</p>
+<p>元の英語タイトル：Pi Node Decentralized Computing Case Study</p>
+<p><a href="https://minepi.com/blog/openmind-case-study/">原文（英語）</a></p>
+</div>
+<div class="note"><p>このページは、Pi Network公式ブログの記事を平たい日本語で要約したものである。全文の翻訳ではない。正確な表現は<a href="https://minepi.com/blog/openmind-case-study/">原文（英語）</a>を確認してほしい。</p></div>
+<p>Pi Networkは、世界中に広がるPiノード（ネットワークに参加するコンピュータ）のネットワークが、分散型のAI学習とコンピューティング作業を支える力を探っている。</p>
+<p>Piノードは長く、台帳を守る以上の役割を果たすよう設計されてきた。Piブロックチェーンは、世界中に分散した多くのノードの分散性から利益を得ているが、Piの台帳自体はエネルギー効率が高く、これほど大規模な分散ノードネットワークの計算資源をすべて必要とはしない。そのため、使われていない計算力の集まりが生まれ、分散型クラウドコンピューティング（多くのコンピュータに処理を分け合う仕組み）のような新しい有用性を可能にできる。AIモデルの学習のために計算力を必要とする第三者は、参加を選んだPiノード運営者のこうした使われていない資源を利用し、運営者に暗号通貨で支払うことができる。Piノード上の有用性は、Piアプリ、基盤レベルの有用性、地域の商取引と並んで、Piの有用性の重要な構成要素である。</p>
+<p>このノードの有用性は、AI時代に現れつつある2つの問題への対応を目指す。</p>
+<ul><li>集中型コンピューティングの限界：データセンターの制約、エネルギーの集中、壊滅的忘却（学習の過程で以前の知識が失われる現象）や全体状態のボトルネック（処理の詰まり）といった問題が含まれる。</li><li>AIによって増える計算力への需要：AIモデルとエージェント（自律的に動くAI）が進歩し、AI経済が広がるにつれて、計算資源への需要は増える。社会は、AI経済を支えるために前例のない量の計算力を提供する必要があり、新しい計算力を作り、既存の使われていない計算力をできる限り活用する必要がある。散らばって使われていない計算力は、生産的であるために、分散ネットワークと、それを集め、調整し、規模を広げる技術に依存する。</li></ul>
+<p>Piは、これら2つの課題を解決するうえで独自の位置にある。Pi自体がすでに分散ネットワークであり、分散コンピューティングを可能にする421,000を超えるノード（100万を超えるCPUに相当）を持つためである。さらに、Piには数千万人のKYCで本人確認を終えた参加者がおり、関連するAI学習過程へのヒューマン・イン・ザ・ループ（処理過程に人間が関与する仕組み）の支援を、暗号通貨による報酬と引き換えに参加して提供できる。これがPiノードからの計算力に加わることで、AIシステムにおける規模が大きく本物の人間の入力という独自の資源を提供でき、AIの依頼者への一括したサービスをさらに完成させる。</p>
+<p>これらの要素が合わさることで、AIの基盤への新しい方法が生まれる。分散システムが生産を自らのネットワークに取り込み、人々がAIの生産過程へ直接貢献し、その見返りにブロックチェーンを基盤とする支払いを通じて報酬を受け取ることを可能にする。</p>
+<p>昨年10月、PiはOpenMindとの概念実証（考え方が実際に成り立つか確かめる試み）プロジェクトを正常に完了した。そのプロジェクトでは、少人数のPiノード運営者のグループが、同社のために画像認識の作業を実行した。</p>
+<h2>OpenMindの事例</h2>
+<p>OpenMindは、ロボットが考え、学び、協力して働くためのオペレーティングシステムとオープンソースのプロトコル（公開された共通の決まり）を開発している。これは、ロボット向けのAndroid OSのようなものである。他のフィジカルAI（現実の体を持つAI）の取り組みと同様に、OpenMindはモデルの学習、評価、実行のために大きな計算力を必要とする。</p>
+<p>Piの分散コンピューティングの実現可能性を試すため、OpenMindは、個々のコンピュータにコンピューティング作業を依頼できるコンテナ（作業環境をまとめた入れ物）を開発した。チームはこのコンテナを、ボランティアのPiノード運営者と共有し、運営者はそれを自分の機械にダウンロードして実行した。</p>
+<p>OpenMindはその後、コンテナを通じて作業を送り、OpenMindのAI画像認識モデルを使って異なる画像を処理するようコンピュータに依頼した。これは、OpenMindのロボットが現実世界と関わるために画像認識の学習が欠かせないという利用事例である。目標は、ボランティアのPiノード運営者の計算力を使って、これらの画像の中にある個別の物体をできる限り多く見つけることであった。</p>
+<p>結果として、概念実証プロジェクトは正常に実行された。作業は外部のテスター（ボランティアのPiノード運営者）へ正しく送られ、有効な結果がOpenMindへ返された。そして利用事例が証明された。Piノードは、ブロックチェーン上の義務とは無関係な第三者が定義し依頼した計算を、参加を選んで実行し、意味のある結果を第三者の依頼者へ返すことができる。</p>
+<p>試験の主な数値は次のとおりである。</p>
+<ul><li>7人のボランティアのPiノード運営者がテストに参加した</li><li>最初から最後までの分散した処理の流れが正常に機能した</li><li>配信された仕事は、1秒以内に7人の作業者から受領確認を受けた</li><li>推論結果は、4秒以内に複数の作業者から返された</li><li>結果には正しい物体検出が含まれ、バスや人といった期待されたラベルと、バウンディングボックス（物体の位置を示す枠）が含まれていた</li><li>仕事は外部テスターの機械へ正常に送られ、有効な検出結果が返された。これにより、分散した配信と結果の返送経路の両方の信頼性が確認された</li></ul>
+<p>全体として、この実験は、分散したPiノードがAIに関連する作業を実行し、有用な結果を速く返せることを裏付けた。</p>
+<h2>次のステップ</h2>
+<p>分散型のAI学習は、世界ではまだ研究段階にある。完全に集中型のAI学習から、より分散した方法への移行が可能かどうか、またどのように可能かについて、世界中の研究者と関心を持つ企業による多くの作業が探求を続ける必要がある。こうした研究は、先に述べた課題、すなわち集中型コンピューティングの構造的な制約への対応、AIのために散らばって使われていない計算力を活用すること、そして個人がAI主導の生産へ意味を持って参加する機会を作ることに、直接関係する。</p>
+<p>使われていないノードの計算力が外部のAI作業をどう支えられるかを評価し、計算力と本物の人間の入力をまとめて提供することで、この取り組みは、AI企業と新興企業がAI学習の必要への解決策を探す際に検討できる、代替となる基盤の選択肢を提供する可能性がある。</p>
+<p>全体として、このノードの有用性に関するPiの研究は、ブロックチェーンとAIの将来についてのPiの展望を補うものである。その展望では、分散した基盤が将来の経済の不可欠な構成要素に貢献し、公平な参加と分配を支える。</p>
+<p class="small"><a href="index.html">← 一覧へ戻る</a>／<a href="https://minepi.com/blog/openmind-case-study/">原文（英語）</a></p>
+</main>
+</body>
+</html>

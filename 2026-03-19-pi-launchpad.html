@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pi Launchpadをテストネットで公開、製品ありきのトークン発行の仕組み | Pi公式ブログ2026 日本語まとめ</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index.html">← 一覧へ戻る</a></p>
+<h1>Pi Launchpadをテストネットで公開、製品ありきのトークン発行の仕組み</h1>
+<div class="meta">
+<p>公開日：2026年3月19日</p>
+<p>カテゴリ：お知らせ、Pi Day関連</p>
+<p>元の英語タイトル：Pi Launchpad Released on Testnet</p>
+<p><a href="https://minepi.com/blog/pi-launchpad/">原文（英語）</a></p>
+</div>
+<div class="note"><p>このページは、Pi Network公式ブログの記事を平たい日本語で要約したものである。全文の翻訳ではない。正確な表現は<a href="https://minepi.com/blog/pi-launchpad/">原文（英語）</a>を確認してほしい。</p></div>
+<p>この記事は、もともとPi Day 2026の発表の一部であり、今回、Launchpadの設計と画面を大まかに紹介する動画による解説が加えられた。</p>
+<p>Piは、オープンネットワーク1周年で公開された、メインネット上のエコシステムトークン（Piの仕組みの中で使われるトークン）の設計を繰り返し練ってきた。エコシステムトークンの層がPiの仕組みにとって重要であり、Pi Launchpad（新しいトークンの公開を支える仕組み）が、Piの考え方に沿った質の高いエコシステムトークンをメインネットに載せる主な手段であることから、コミュニティから意見を募るため、Pi Request for Comment（PiRC、意見募集のための提案文書）が公開された。</p>
+<p>今回、PiRCのDesign 1（設計案1）の仕組みを取り入れたPi Launchpadの初期版が、テスト用トークンとともに、テストネット（本番前のテスト用ネットワーク）上のPiアプリとして公開された。Launchpadは多くのパイオニアにとって新しい考え方を取り入れており、Web3（ブロックチェーンを基盤とする分散型のウェブ）で一般的なトークン公開とは異なる仕組みを使う。そのため、メインネットでの公開の前に、コミュニティが過程の仕組みに慣れることができるよう、まずテストネットで導入された。これは、GitHub上のPiRCを読んでいない場合でも、パイオニアが新しいLaunchpadの仕組みと、多くのDeFi（分散型金融、ブロックチェーン上で行う金融の仕組み）の過程を実際の動きの中で学ぶ教育的な過程でもある。この期間に集められたデータと意見は、メインネット版の導入前に製品を練り上げ、改善するために役立てられる。Pi LaunchpadアプリにはPi Browserからアクセスできる。</p>
+<p>オープンネットワーク記念の際に紹介されたとおり、Pi Launchpadによって公開されるエコシステムトークンは、主に資金調達を目的とするのではなく、ユーザー獲得と製品の有用性のために設計されている。この形では、プロジェクトは自らのアプリのユーザーを獲得する道具としてトークンを発行し、そのトークンを製品の機能へ直接組み込む。たとえば、アプリ内でのアクセス、支払い、報酬、ガバナンス（運営への参加の仕組み）などに使う。トークンの公開で得られたPiの収益は、発行したプロジェクトが受け取るのではなく、エコシステムトークンとの流動性プール（取引を円滑にするため、資産をまとめて置く仕組み）へ入れられ、最初から健全な流動性の土台を作る。</p>
+<p>プロジェクトにとって、エコシステムトークンは本物のユーザーを引き付け、意見を集め、製品を確認して改良を重ねる仕組みとなる。トークンというWeb3の道具がなければ、ユーザー獲得には通常大きな費用がかかり、特に新興企業にとっては、最初のユーザーが集まらないという立ち上げ初期の難しさが大きい。Piの仕組みは、革新的な製品を大規模な世界中の利用者に見せたい事業者に、こうした道具と支援を提供する。利用者には、暗号資産に詳しい利用者と一般の利用者の両方が含まれ、その多くは本人確認を終えている。同時に、利用者を製品の改良と進化の歩みに招き入れる。トークンを実際の製品体験と結び付けることで、プロジェクトは自らのトークンに有用性を生むだけでなく、利用者を開発過程の早い段階から関わらせること、製品の特徴と機能を試すこと、製品が人間の本当の必要に応えているか確認すること、そして製品をより効果的に成長させることができる。</p>
+<p>パイオニアの視点では、Launchpadはこれらのトークンへの透明で実力に基づくアクセスを提供する。パイオニアは異なるプロジェクトへの参加を選び、公開の仕組みを通じてトークンにアクセスし、そのトークンを製品の中で使うことができる。これにより、利用者が製品と関わり、その有用性を評価し、プロジェクトに有用なサービスの提供を求めるという循環が生まれる。Web2の製品とは異なり、利用者は企業が提供する製品を使うだけではなく、企業が発行したトークンを早い段階から保有し、使う存在となる。</p>
+<p>Pi Launchpadを通じて公開するプロジェクトには、製品を第一とすることが求められる。つまり、プロジェクトはすでに動くアプリを持っている必要があり、それによってトークンが公開時点で直ちに有用性を持つ。</p>
+<p>Launchpadの仕組みは、Piの仕組みの中での分散型取引所（DEX、中央の管理者を置かずに取引する仕組み）の活動の進展も支える。Pi DEXは現在テストネット上に存在するが、健全な取引環境は、実質的な有用性と流動性を持つ正当なトークンが利用できることに依存する。製品を第一とするプロジェクトがエコシステムトークンを公開できるようにし、Piの収益をそのトークンとの流動性プールへ向けることで、Pi Launchpadは、こうした特徴を持つトークンがPi DEXで利用できる流れを作る助けとなり、流動性の必要に応えることが意図されている。この構造は、メインネット上でDEXとAMM（自動マーケットメイカー、自動で価格を決めて取引する仕組み）が、意味のある有用性を持たない投機的なトークンで溢れることによる、初期の悪用を防ぐ助けとなり得る。この方法により、Piの仕組みの有用性重視の方針に沿ったトークンを仕組みの中に作ることができ、パイオニアが参加できる安全な場を提供するという目標に応えながら、より活発な取引活動を支える。</p>
+<p>メインネット上のエコシステムトークンの背景にある当初の設計思想の詳細については、オープンネットワーク記念の記事を読むこと、Pi創設者Chengdiao Fanの動画を見ること、そしてGitHub上の詳細な設計提案を読んで意見を出すことが案内されている。</p>
+<p>Pi Dayの製品公開により、資料を読む、動画を見ることに加えて、Pi Launchpadの最初の版を試し、実際の動きの中で仕組みを学ぶことができる。なお、Launchpad製品はテスト段階では速く改良され、変わる場合がある。たとえば、公開の各段階の期間、異なるステップの利用可否、利用できる情報、計算方法などである。訪問のたびに内容が同じとは限らない。この速さでの変化や不整合は、メインネット版では起こらない。テストネット版での速い改良と変化は製品テストの一部として意図されており、その結果が設計に反映され、メインネットでの最適な版に到達する。</p>
+<p>なお、エコシステムトークン全体の設計とPi Launchpad製品は、設計に対するコミュニティの意見、テストネット期間に集められたデータ、こうした有用性トークンの発行を意図するプロジェクトからの意見に基づいて、変更される可能性がある。</p>
+<p class="small"><a href="index.html">← 一覧へ戻る</a>／<a href="https://minepi.com/blog/pi-launchpad/">原文（英語）</a></p>
+</main>
+</body>
+</html>

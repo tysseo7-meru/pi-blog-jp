@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SoloHostの新しいアプリを紹介する：OpenClawとAtlassian MCP Server | Pi公式ブログ2026 日本語まとめ</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index.html">← 一覧へ戻る</a></p>
+<h1>SoloHostの新しいアプリを紹介する：OpenClawとAtlassian MCP Server</h1>
+<div class="meta">
+<p>公開日：2026年8月27日</p>
+<p>カテゴリ：開発者向け、更新情報</p>
+<p>元の英語タイトル：Featuring New SoloHost Apps: OpenClaw and Atlassian MCP Server</p>
+<p><a href="https://minepi.com/blog/new-solohost-apps/">原文（英語）</a></p>
+</div>
+<div class="note"><p>このページは、Pi Network公式ブログの記事を平たい日本語で要約したものである。全文の翻訳ではない。正確な表現は<a href="https://minepi.com/blog/new-solohost-apps/">原文（英語）</a>を確認してほしい。</p></div>
+<p>OpenClawとAtlassian MCP Serverのアプリが、Pi DesktopのSoloHost（自分で運用するアプリを簡単に導入して動かせる仕組み）で紹介されるようになり、自分のコンピューターでより簡単に導入して動かせる役立つソフトウェアの幅が広がった。</p>
+<p>Node 0.6.2のバージョンとあわせて出されたこの2つのアプリは、SoloHostが、自分の場所で動くAIエージェント（AIが自律的に作業する仕組み）から、より専門的なAI連携の仕事の流れまで、異なる必要を支えられることを示している。</p>
+<p>SoloHostにより、利用者は、裏側のサーバーやDocker（アプリを隔離して動かす仕組み）などの技術的な土台を手作業で細かく設定しなくても、Pi Desktopを通じて自分で運用するアプリを見つけ、評価し、導入し、動かすことができる。OpenClawは、自分の場所のモデルでも、ChatGPTやClaudeのような外部モデルでも動く、自分の場所で動くAIエージェントである。一方、Atlassian MCP Serverのアプリは、対応するAI道具と、仕事の流れを整理するJiraをつなぐための、自分の場所で動くMCPサーバーを提供する。</p>
+<h2>SoloHost上のOpenClaw：より簡単でより閉じた自分の場所のAI</h2>
+<p>OpenClawは、利用者自身のコンピューターで動いて作業を助ける、自分の場所で動くAIエージェントである。自分の場所のAIモデルでエージェントを動かすための性能条件を満たすコンピューターでは、OpenClawにより、利用者は自分のデータや計算環境とどう関わるかをより強く管理でき、対応する作業では遠くの土台への依存を減らすことができる。代わりに、ClaudeやChatGPTのようなクラウド上のモデルを使う場合、そのモデルへ送られた要求はモデルの提供者の土台で処理される。どちらの構成でも、OpenClawの記憶は利用者のコンピューター上に作られ保存される。</p>
+<p>OpenClawがSoloHostを通じて動くときは、より広いコンピューターへの標準でのアクセスを制限するよう設計されたコンテナ（アプリを隔離して動かす箱）の中で動く。SoloHostの外へ直接導入した場合に、自分の場所のファイルシステムなど、コンピューター全体へのより広いアクセスが標準で与えられる場合と比べると、設定したモデルが自分の場所のものでもクラウドのものでも、関係のない自分の場所のファイルやシステム資源への露出が少ない、より閉じた構成になる。</p>
+<p>この閉じた構成は、すべての危険を取り除くものではなく、利用者がはっきりと与えた許可を無効にするものでもない。利用者がOpenClawに外部のサービスや資源へのアクセスを許可すれば、エージェントはその許可の範囲内で依然として行動できる。SoloHostの構成の利点はより具体的であり、自分の場所のコンピューターの他の部分への不要な標準アクセスを制限しつつ、特定の作業に必要なはっきりした許可を利用者が与えられることである。</p>
+<p>SoloHostは、アプリと必要な環境をPi Desktopを通じて自動で使えるようまとめることでOpenClawの設定も簡単にしており、利用者が本来手作業で扱う必要がある設定の量を減らしている。</p>
+<p>すでに公開されているHermesという自分の場所で動くAIエージェントに加えてOpenClawが加わることで、Pi Desktopを通じて使える自分の場所で動くAIエージェントの選択肢が広がる。OpenClawは、道具やメッセージの経路全体につながる個人の助け役であることを重視し、Hermesは、残り続ける記憶と経験から技能を学ぶことをより重視している。</p>
+<h2>SoloHost上のAtlassian MCP Server：AIの仕事の流れとJiraをつなぐこと</h2>
+<p>SoloHost上のAtlassian MCP Serverは、AI道具を自分のJiraの仕事の流れに組み込みたい開発者、製品チーム、その他の専門家といった、より専門的な必要に対応する。</p>
+<p>AI道具がJiraのようなサービスとやり取りするには、2つの仕組みが通信する方法が必要である。Model Context Protocol、すなわちMCP（AI道具と外部の仕組みをつなぐための決まり）は、対応するAI道具がMCPサーバーを使ってJiraのような外部の仕組みにつながるための枠組みを提供する。</p>
+<p>Atlassian（Jira）は自社で運用するMCPの選択肢を提供しているが、チームが内部のAI連携Jiraの仕事の流れにそれを使うと、上限（クォータ）や安定性の制限に当たる場合がある。ここでのSoloHostアプリは、そうした制約に当たるチームの必要を解消するものであり、利用者が上限や安定性の問題に制限されない自分のMCPサーバーを自分の場所で動かせるようにする。</p>
+<p>具体的には、SoloHost上のAtlassian MCP Serverにより、利用者自身のコンピューターや選んだ機械がサーバーを自分の場所で動かすことができる。MCPに対応するAI道具は、その自分の場所のサーバーを通じてつながり、Jiraで作業できる。接続は特定のAIの仕組みではなくMCPに基づくため、Cursor、Claude DesktopやClaude Code、Codexなど、異なるMCP対応のAI道具で動くことができ、Jiraでの仕事の流れの整理をより自動的で賢いものにできる。</p>
+<h2>パイオニアとPiのエコシステムに向けたSoloHostの実用性の拡大</h2>
+<p>OpenClawとAtlassian MCP Serverは、SoloHostが、自分の場所で動くAIエージェントからより専門的な開発者向け道具まで、異なる利用者の必要に向けた異なる種類の自分で運用するソフトウェアを支えられることを示している。</p>
+<p>これにより、パイオニア（Piの利用者）は自分のコンピューターを自分の場所のAIに使う方法が増え、他の自分で運用するアプリへもより簡単にアクセスでき、Pi Desktopとノード（ネットワークを支えるコンピューター）の実用性がブロックチェーンの土台を超えてさらに広がる。SoloHostを通じて、人々は自分のデータと計算をより多く自分の端末にとどめ、第三者の遠くの土台への依存を減らしながら、AIの恩恵を受けることができる。</p>
+<p>同時に、この2つのアプリは、開発者がさまざまな道具を作ってPiのエコシステムに持ち込み、420,000を超えるPi Nodeの運用者と、より多くのDesktop利用者に届けられることを示している。</p>
+<p>自分で運用するアプリが増えるにつれて、SoloHostは、実用的な道具のための仕組みとしてのPi Desktopの役割を広げ続け、利用者がすでに運用している計算資源から恩恵を受ける方法を増やすことができる。</p>
+<p>SoloHostは依然としてベータ（試行版）であり、許可が不要な公開の流れを使っている。利用者は個々のパッケージ（アプリ一式）を評価し、自己責任で導入すべきである。</p>
+<p class="small"><a href="index.html">← 一覧へ戻る</a>／<a href="https://minepi.com/blog/new-solohost-apps/">原文（英語）</a></p>
+</main>
+</body>
+</html>

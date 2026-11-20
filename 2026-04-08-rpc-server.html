@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>テストネットにRPCサーバーを公開、スマートコントラクト開発の基盤が進む | Pi公式ブログ2026 日本語まとめ</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index.html">← 一覧へ戻る</a></p>
+<h1>テストネットにRPCサーバーを公開、スマートコントラクト開発の基盤が進む</h1>
+<div class="meta">
+<p>公開日：2026年4月8日</p>
+<p>カテゴリ：お知らせ、開発者向け</p>
+<p>元の英語タイトル：Pi Testnet RPC Server Released: Enabling Scalable Smart Contract Development</p>
+<p><a href="https://minepi.com/blog/rpc-server/">原文（英語）</a></p>
+</div>
+<div class="note"><p>このページは、Pi Network公式ブログの記事を平たい日本語で要約したものである。全文の翻訳ではない。正確な表現は<a href="https://minepi.com/blog/rpc-server/">原文（英語）</a>を確認してほしい。</p></div>
+<p>Pi Networkは、テストネット（本番前のテスト用ネットワーク）でRPCサーバーを公開した。RPC（Remote Procedure Call、アプリがブロックチェーンに問い合わせや指示を送り、結果を受け取るための窓口）サーバーは、Piの仕組みの中でスマートコントラクト（ブロックチェーン上で条件に応じて自動で実行されるプログラム）の開発、テスト、今後の本番導入を支える重要な基盤の節目である。</p>
+<p>今回の公開は、Pi Day 2026で発表されたノードとプロトコルのアップグレードを土台とする。Pi Day 2026では、メインネット（本番ネットワーク）のブロックチェーンがプロトコル20にアップグレードされ、スマートコントラクト機能の土台が作られた。メインネットのプロトコルのアップグレードはその後も続き、現在はプロトコル21へのアップグレードが進んでいる。</p>
+<h2>RPCサーバーでできること</h2>
+<p>RPCサーバーは、アプリがリクエスト（要求）を送り、レスポンス（応答）を受け取ることでブロックチェーンと通信するための仕組みである。この基盤は、スマートコントラクトを使った実用的なアプリを作るうえで欠かせない。RPCサーバーは、スマートコントラクトとのやり取りについて、次の2種類を支える。</p>
+<ul><li>読み取り専用の呼び出し（手数料は不要）：開発者は、口座の状態、残高、アプリ固有の情報といったスマートコントラクトのデータを、ガス手数料（ブロックチェーンを使う際の手数料）を払わずに問い合わせることができる。この操作はブロックチェーンの状態を変えず、RPCの接続先を通じて即座に実行される。</li><li>状態を変えるトランザクション（手数料が必要）：コントラクトの処理を実行する、データを更新するなど、ブロックチェーンの状態を変える操作は、引き続き通常のトランザクション処理と、それに伴う手数料が必要である。</li></ul>
+<p>実際の利用場面の多くは、速くて無料の読み取りアクセスに大きく依存する。アプリとブロックチェーンの間の効率的な通信を可能にすることで、RPCサーバーは開発者に次のことを可能にする。</p>
+<ul><li>リアルタイムのブロックチェーンデータに頼る、反応の速いアプリを作ること</li><li>管理された環境でスマートコントラクトの動きをテストし、再現すること</li><li>バックエンドのサービス（裏側で動く仕組み）とユーザー画面をPiのブロックチェーンとつなぐこと</li></ul>
+<h2>開発者はテストネットでRPCサーバーを試せる</h2>
+<p>RPCサーバーは現在、Piテストネットで利用でき、開発者が調べてテストできる。開発者には実際に試すことが勧められている。テストネットでの性能と信頼性をもとに、RPCサーバーはメインネットでも公開される予定である。</p>
+<h2>ノード運営者は自分のRPCサーバーを追加できる</h2>
+<p>ノード運営者や、スマートコントラクトに依存するサービスを運営する事業者も、自分のRPCサーバーを追加できる。用途は、自分の内部利用専用でも、一般に公開する形でもよい。</p>
+<p class="small"><a href="index.html">← 一覧へ戻る</a>／<a href="https://minepi.com/blog/rpc-server/">原文（英語）</a></p>
+</main>
+</body>
+</html>

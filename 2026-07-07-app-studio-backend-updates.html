@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pi App Studioに裏側の保存機能とAIによる企画支援が追加 ― 新しく作るアプリが対象 | Pi公式ブログ2026 日本語まとめ</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index.html">← 一覧へ戻る</a></p>
+<h1>Pi App Studioに裏側の保存機能とAIによる企画支援が追加 ― 新しく作るアプリが対象</h1>
+<div class="meta">
+<p>公開日：2026年7月7日</p>
+<p>カテゴリ：更新情報</p>
+<p>元の英語タイトル：Pi App Studio Adds Backend Infrastructure Support and App Planning for Newly Created Apps</p>
+<p><a href="https://minepi.com/blog/app-studio-backend-updates/">原文（英語）</a></p>
+</div>
+<div class="note"><p>このページは、Pi Network公式ブログの記事を平たい日本語で要約したものである。全文の翻訳ではない。正確な表現は<a href="https://minepi.com/blog/app-studio-backend-updates/">原文（英語）</a>を確認してほしい。</p></div>
+<p>Pi App Studioは、作り手がより役立つアプリ体験を作れるよう助ける2つの更新を導入した。新しく作られたアプリ向けの、裏側（バックエンド、利用者からは見えないサーバー側の仕組み）での永続的な保存と、アプリ生成が始まる前の、AIに助けられたアプリ企画の段階である。</p>
+<h2>裏側の対応で、より続くアプリ体験が可能に</h2>
+<p>バックエンドの能力は永続的な保存から始まる。Pi App Studioは今、アプリの作り手が利用者の利用回（セッション）を超えて続く体験を作れるようにした。これによりアプリは、利用者ごとのデータをセッションを超えて保存し取り出すことができ、利用者が離れて戻ってきた後も続く体験が可能になる。</p>
+<p>以前は、Pi App Studioのアプリは主に、表側（フロントエンド、利用者が直接触る画面側）だけの、1回限りのセッションの体験に限られていた。設定や進み具合といったアプリのデータは、利用者がアプリを離れると消えてしまっていた。</p>
+<p>今は、ゲームアプリで利用者が高いスコアを出せば、利用者がアプリを離れた後も保たれる。生産性アプリは利用者のやることリストを覚え、メモアプリは保存したメモを自動で保ち、その他のアプリも、利用者が訪れるたびに最初からやり直すのではなく、利用者ごとのデータを時間を超えて保つことができる。</p>
+<p>バックエンド対応を加えることは、App Studioのプラットフォーム（土台）にとって大きな節目である。AIが作ったアプリがPi Network上で実際にできることが広がるためである。永続的な保存は、この土台の上に作られた最初の能力であり、より広い範囲の、役立つ日常的なアプリケーションを可能にする。</p>
+<p>なお、この更新は新しく作られたApp Studioアプリにのみ当てはまる。</p>
+<h2>より良いアプリ作成のための企画支援</h2>
+<p>Pi App Studioは「アプリ企画の段階」という機能も追加した。作り手は、App Studioがアプリを生成する前に、AIの助けを受けて自分のアイデアを発展させることができる。企画の段階は、最初の思いつきから、より完成したアプリの考えへと、より対話的で動きのある方法で案内する助けになる。</p>
+<p>例えば、App Studioが、アプリの中心のアイデア、目標、カテゴリ（分類）、利用体験について、さらに詳しく尋ねる場合がある。企画の過程により、App Studioへの指示（プロンプト）がより徹底的で詳しいものになる。これは、AIが利用者にとってより質の高いアプリ体験を生成するために欠かせない。</p>
+<p>今日Pi App Studioで新しいアプリを作り、より強いアプリの考えを企画することから、セッションを超えて続くアプリ体験を作ることまで、これらの更新を試すことができる。</p>
+<p class="small"><a href="index.html">← 一覧へ戻る</a>／<a href="https://minepi.com/blog/app-studio-backend-updates/">原文（英語）</a></p>
+</main>
+</body>
+</html>

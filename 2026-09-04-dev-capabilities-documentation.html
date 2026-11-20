@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Piが開発者向けの新しい機能を追加し、新しい開発者向け文書を公開する | Pi公式ブログ2026 日本語まとめ</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index.html">← 一覧へ戻る</a></p>
+<h1>Piが開発者向けの新しい機能を追加し、新しい開発者向け文書を公開する</h1>
+<div class="meta">
+<p>公開日：2026年9月4日</p>
+<p>カテゴリ：開発者向け、更新情報</p>
+<p>元の英語タイトル：Pi Adds New Developer Capabilities and Releases New Documentation For Developers</p>
+<p><a href="https://minepi.com/blog/dev-capabilities-documentation/">原文（英語）</a></p>
+</div>
+<div class="note"><p>このページは、Pi Network公式ブログの記事を平たい日本語で要約したものである。全文の翻訳ではない。正確な表現は<a href="https://minepi.com/blog/dev-capabilities-documentation/">原文（英語）</a>を確認してほしい。</p></div>
+<p>Piは、Piの上で作る開発者向けに新しい機能を導入した。内容は、ローカルストレージ（端末内保存）への対応、Ecosystem Directory Staking（エコシステム一覧でのステーキングの仕組み）におけるアプリごとのステーキングデータへのアクセス、ファイルと動画の共有である。Piの新しい開発者向け文書も公開され、技術資料が1か所に集まり、始めてからアプリを作って公開するまでの道筋が分かりやすくなった。</p>
+<p>これらの更新を合わせると、開発者が使える道具が広がり、Piでの開発を支える文書と参加の手引きが改善される。</p>
+<h2>ローカルストレージ（端末内保存）への対応</h2>
+<p>Piは、Pi Browserの中で、最初は許可リスト（ホワイトリスト）に入った一部のアプリを対象に、ローカルストレージへの対応を加えた。これにより、対象のアプリは特定のデータをパイオニア（Piの利用者）の端末に直接置けるようになる。これは、Piがネットワーク上で作る費用と手間を減らす方法の1つである。</p>
+<p>設定、セッションの状態（利用中の状態）、その他ローカルストレージに合うデータは、開発者が自分の裏側の仕組み（バックエンド）で保存して届ける必要がなく、端末に置くことができる。これにより、関連する土台の費用を減らす助けになる。</p>
+<p>このデータはPi Browserがアプリの代わりに管理し、内容はPiのサーバーへ送られずパイオニアの端末にとどまるため、そのデータは端末の中で非公開に保たれる。この対応は、iOSとAndroidの両方でより一貫した保存の体験を提供するよう設計されている。データは端末内に保存されるため、利用者を自動で追って端末をまたぐのではなく、特定のアカウントと端末に結び付いたままになる。</p>
+<p>アプリがこの機能を使うには、最初は許可リストに入る必要がある。現在の仕組みでは、許可リストに入ったアプリが端末内の限られた保存場所を分け合って使い、その保存場所がいっぱいになると古いデータが取り除かれる場合がある。そのため、ローカルストレージは永続的な保存が保証される場所としての使用を想定していない。アプリごとに機能を有効にすることで、最初の使用に追加の歯止めと慎重さを持たせながら、端末、保存の状態、実際の使い方のパターン全体で性能と保存の動きをPiが確かめられるようにしている。</p>
+<h2>ステーキングデータAPI</h2>
+<p>PiはステーキングデータAPI（外部からデータを取得するための窓口）も導入し、開発者が、Ecosystem Directory Stakingの機能を通じて利用者が自分のアプリにステーキング（Piを預けて支えること）した実効量を見られるようにした。実効ステークは、ステーキングしたPiの量と、その期間に基づく上乗せの両方を考えに入れたものである。</p>
+<p>このAPIは、要求したアプリに対する利用者の実効ステークをそのアプリ専用に返すため、開発者はアプリごとのステーキング情報を取得し、自分のアプリに組み込むことができる。</p>
+<p>このAPIへのアクセスも、最初は要求するアプリが許可リストに入る必要がある。これにより、最初の期間に開発者とパイオニアから得た試用と意見が、APIの今後の発展の参考になることが助けになる。</p>
+<h2>ファイルと動画の共有機能</h2>
+<p>開発者は、Pi.shareFileを使って、利用者が自分のアプリから動画を含むファイルを共有できるようにできるようになった。</p>
+<p>これにより、ファイル共有の機能が必要なアプリに組み込める機能が開発者に増え、より幅広いアプリ体験を支える。使い方の例として、マーケットプレイス（売買の場）のアプリでパイオニアが領収書や争いになっている品物の画像を共有することや、ゲームやコンテンツのアプリで利用者がアプリから直接画像や動画の切り抜きを共有することがある。携帯電話にもともとある共有機能を使うことで、開発者は自分で別の共有の流れを作らなくても、こうした体験を加えることができる。</p>
+<h2>改善された開発者向け文書の公開</h2>
+<p>Piの新しい開発者向け文書が公開され、Piの上で作る開発者のための資料が1か所に集まり、開発者体験が改善された。</p>
+<p>以前は、Piの開発者向け文書は、SDK（開発用部品一式）の文書、Community Developer Guide、GitHubの文書リポジトリ（ファイル置き場）など、複数の場所に分かれていた。資料が重なることもあり、異なるPiのウェブページや他の経路から入った開発者が、異なる情報源にたどり着くことがあった。</p>
+<p>新しいサイトは、開発者向け文書をPiが持つ1つのドメイン（サイトの住所）にまとめ、開発者の道筋に沿って整理し直した。開発者は、始めてアプリを登録するところから、サンドボックス（試し用の環境）での開発、Piの機能の組み込み、アプリの公開準備まで、より分かりやすい道筋をたどることができる。</p>
+<p>まとめ直しに加えて、新しい文書は、以前は分かりにくいとコミュニティの開発者から伝えられていた仕組みについての詳しい内容と説明も充実させた。文書は、Pi開発の始め方として、アカウントとアプリの登録、サンドボックスの設定、SDKと仕組みのリファレンス、本人確認と支払い、サンドボックス開発からメインネット（本番のネットワーク）と公開までの道筋を取り上げる。また、本人確認と支払いを組み込むためのAIによる案内も紹介している。</p>
+<p>文書は現在の仕組みの動きに照らして見直されており、開発者が作る際に1つの最新の情報源を使えるよう助けるものである。</p>
+<h2>Piのエコシステム全体での開発を支えること</h2>
+<p>開発者向け道具は、開発者がPiの上で作れるアプリやサービスの種類に直接影響するため、実用性に向けたPiのより大きな焦点の大切な部分である。ローカルストレージ、アプリごとのステーキングデータ、ファイル共有は、それぞれ開発者が自分のアプリに組み込める部品を増やし、より分かりやすく1つにまとまった文書と参加の手引きは、Piの開発者向け仕組みで使える機能を理解し実装することを簡単にしている。</p>
+<p>開発者を支えることは、アプリの段階での実用性を広げるために欠かせない。開発者は、パイオニアがPiのエコシステムに参加する方法を増やす製品、サービス、体験を作る。土台となる開発環境を改善することは、Piの技術的な機能とエコシステムの資源を、パイオニアが使えるアプリに変える助けになる。</p>
+<p>Piのエコシステムがより幅広いアプリを支え続ける中で、これらの開発者向け道具と文書の改善は、Piのエコシステムでアプリを作り続けていく際の実際のハードルを下げる助けになる。</p>
+<p class="small"><a href="index.html">← 一覧へ戻る</a>／<a href="https://minepi.com/blog/dev-capabilities-documentation/">原文（英語）</a></p>
+</main>
+</body>
+</html>

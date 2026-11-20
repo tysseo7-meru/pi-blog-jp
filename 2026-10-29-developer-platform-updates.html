@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>開発者向けの更新：ポータルの画面改善、トークン価格の追跡、SoloHostのAI梱包、PiVerifyの拡大 | Pi公式ブログ2026 日本語まとめ</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index.html">← 一覧へ戻る</a></p>
+<h1>開発者向けの更新：ポータルの画面改善、トークン価格の追跡、SoloHostのAI梱包、PiVerifyの拡大</h1>
+<div class="meta">
+<p>公開日：2026年10月29日</p>
+<p>カテゴリ：開発者向け、更新情報</p>
+<p>元の英語タイトル：Pi Updates: Developer Portal Interface, BlockExplorer Token Tracking, SoloHost AI App Packaging, and PiVerify</p>
+<p><a href="https://minepi.com/blog/developer-platform-updates/">原文（英語）</a></p>
+</div>
+<div class="note"><p>このページは、Pi Network公式ブログの記事を平たい日本語で要約したものである。全文の翻訳ではない。正確な表現は<a href="https://minepi.com/blog/developer-platform-updates/">原文（英語）</a>を確認してほしい。</p></div>
+<p>Pi Networkは、開発者ツールと製品全体にわたるいくつかの技術的な更新を導入した。内容には、Developer Portal（開発者ポータル）の流れと画面の改善、Pi BlockExplorer（取引などを調べる画面）におけるLaunchpadトークンの価格追跡、AIが手伝うSoloHostのアプリ梱包、PiVerifyの機能が含まれる。</p>
+<p>これらの改善を合わせると、開発者がPiの上で作りやすくなり、エコシステムの活動への見通しが高まり、ネットワークの土台となる基盤が強化される。</p>
+<h2>改善された開発者ポータル</h2>
+<p>PiはDeveloper Portalを更新し、開発者がアプリを設定して管理しやすくなるよう、画面を再設計した。</p>
+<p>従来の利用開始チェックリストは、専用のApp Configuration（アプリ設定）の欄に置き換えられ、ドメイン、APIキー（連携のための鍵）、アプリのウォレット、プライバシー情報といった設定が1か所にまとめられた。更新された画面は、Pi Sign-In、Ecosystem Listing（エコシステムへの掲載）、PiNet、Pi Ad Networkといった重要な機能と開発者向け資料への移動も分かりやすくしている。</p>
+<p>Developer Portalは、アプリを、利用者認証、Pi支払い、エコシステムでの発見を含むPiのより広い基盤につなぐものである。これらの流れを簡単にすることで、この更新は、開発者がPiの機能をより容易に組み込み、アプリの公開に備え、時間をかけて管理する手助けをする。最近公開された開発者向け機能と統一ドキュメントと並んで、これらの改善は、アプリ開発の障壁を下げるというPiのより広い取り組みの一部であり、パイオニア（Piの利用者）のためのアプリと実用性を増やし、今後のエコシステム・サミットに向けて、開発者がPi上でアプリを作って公開しやすくすることで、その準備も支えるものである。</p>
+<h2>Pi BlockExplorerでのトークン価格の追跡</h2>
+<p>Pi BlockExplorerに、Launchpadのテストネットトークンの過去の価格追跡が含まれるようになり、パイオニアと開発者は、SLICEのようなトークンがTest-Piに対して時間とともにどう価格を変えたかを見ることができるようになった。将来のメインネットトークンについても、この機能が公開された後は、このBlockExplorerの画面で追跡される。この更新は、Launchpadアプリの中に価格のグラフを導入し、流動性プール（交換のための資金をためた仕組み）での交換がトークン価格にどう影響するかを説明した、前回のPi Launchpadの更新の上に成り立っている。</p>
+<p>この機能は、エコシステムトークンに対するPi Launchpadのより広い取り組み方を支えるものである。エコシステムトークンは、プロジェクトが利用者を獲得し、アクセス、支払い、報酬といった実用目的のためにトークンをアプリに組み込む手助けをするよう設計されている。トークンの発行によるPiの収益は、発行したプロジェクトが受け取るのではなく、エコシステムトークンとの流動性プールに入り、最初から健全な流動性の土台を作る。</p>
+<p>この情報をBlockExplorerを通じて利用できるようにすることで、パイオニアとより広い一般の人々は、Pi BrowserやPiアカウントにアクセスしなくても、Launchpadのテストネットトークンとその価格の履歴を見ることができ、これらの仕組みへの見通しが高まる。以前のLaunchpadテストネットの公開と同様に、この更新もパイオニアの学びを支え、最初のメインネットトークン発行に先立って、PiがLaunchpadのモデルを磨く手助けをする。なお、これらのテスト用トークンはテストネット上にのみあり、メインネットに行くことは決してない。</p>
+<h2>AIが手伝うSoloHostのアプリ梱包</h2>
+<p>Piは、公開されているSoloHostのGitHubリポジトリに新しいスキルを導入した。これにより、開発者はAIコーディング支援を使って、Pi DesktopのSoloHostを通じて公開するためのアプリの準備を手伝ってもらえるようになる。</p>
+<p>以前は、開発者はSoloHostを通じてアプリを公開するために必要な設定ファイルを手作業で準備しなければならなかった。新しいスキルでは、開発者は既存のアプリの公開Dockerイメージ（アプリとその実行環境をひとまとめにした配布形式）を、Claude Code、Cursor、Codexのような、エージェントスキルに対応するAI支援に渡し、公開Dockerイメージを使って既存のアプリを梱包することができる。支援するAIは、アプリが提供すべき機能を尋ね、必要な2つのファイルであるdocker-compose.ymlとconfig_options.ymlを生成し、その内容を検証する。</p>
+<p>開発者はSoloHostのGitHubリポジトリからスキルをインストールでき、その後、生成された設定ファイルを使って、SoloHostを通じた公開のためにアプリを提出できる。</p>
+<p>既存のアプリを梱包するために必要な技術的な作業を簡単にすることで、この更新は、開発者がより多くの自分で運用するソフトウェアをPi Desktopに持ち込む際の障壁を下げ、パイオニアが利用できる実用性の範囲をさらに広げる。SoloHostで公開することは、開発者が自分のアプリを、42万を超えるPiの既存のNodeネットワークに配布し、自分のコンピュータで自分で運用するアプリを動かすことに関心のある他のパイオニアに届ける方法となる。</p>
+<h2>拡大されたPiVerifyの本人確認機能</h2>
+<p>PiVerifyは、第三者の企業向けの本人確認サービスを拡大し、顔の重複の確認と、複数回の生存確認（本人がその場にいるかを確認すること）を含むようにした。これらは、PiのKYC（本人確認）の仕組みの中で、すでに使われている機能の上に成り立っている。</p>
+<p>顔の重複の確認は、企業が自社の利用者の中に重複している可能性のある本人情報を見つける手助けをする。一方、複数回の生存確認により、企業は利用者の最初の本人確認の後に、追加の確認を求めることができる。これらの機能は、偽のアカウント、不正、悪用に対するより強い保護を支えるものであり、実際の人間と自動化された、あるいは不正な活動を見分けることがより重要になる中で、特に意味を持つ。</p>
+<p>Pi2Day 2026の発表で紹介されたとおり、PiVerifyはPiのAIと人による本人確認の基盤を外部のプラットフォームに広げ、企業が何百万人ものパイオニアの確認を通じて開発された技術を使えるようにするものである。これらのサービスを拡大することは、Pi自身のエコシステムを超えた実在の人間の確認を支え、第三者の依頼者がPiVerifyのサービスに対してPiで支払うことは、Piの追加の実用性を生み、より広い確認済みの個人のネットワークを広げる手助けにもなる。</p>
+<p class="small"><a href="index.html">← 一覧へ戻る</a>／<a href="https://minepi.com/blog/developer-platform-updates/">原文（英語）</a></p>
+</main>
+</body>
+</html>

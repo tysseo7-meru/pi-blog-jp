@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pi Node 0.6.2を公開 ― SoloHostの改善と分散コンピューティングのテスト完了 | Pi公式ブログ2026 日本語まとめ</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index.html">← 一覧へ戻る</a></p>
+<h1>Pi Node 0.6.2を公開 ― SoloHostの改善と分散コンピューティングのテスト完了</h1>
+<div class="meta">
+<p>公開日：2026年8月14日</p>
+<p>カテゴリ：開発者向け、更新情報</p>
+<p>元の英語タイトル：Release of Pi Node Version 0.6.2 &amp; SoloHost Updates</p>
+<p><a href="https://minepi.com/blog/pi-node-0-6-2/">原文（英語）</a></p>
+</div>
+<div class="note"><p>このページは、Pi Network公式ブログの記事を平たい日本語で要約したものである。全文の翻訳ではない。正確な表現は<a href="https://minepi.com/blog/pi-node-0-6-2/">原文（英語）</a>を確認してほしい。</p></div>
+<p>Pi Node（Piのネットワークを支えるためにパソコンで動かすソフト）のバージョン0.6.2が公開された。SoloHost、Nodeの接続、Pi Desktopの使い勝手に改善が入っている。</p>
+<p>あわせてPiは、SoloHostアプリを通じた分散コンピューティング（計算の仕事を複数のパソコンに分けて処理すること）のテストを無事に完了した。これにより、Pi Nodeの役割はPiブロックチェーン（取引記録を分散して管理する仕組み）を支えること以外にも広がっていく。</p>
+<h2>Pi Node 0.6.2の公開</h2>
+<p>バージョン0.6.2には次の更新が含まれる。</p>
+<ul><li>UPnPによる自動ポート設定と新しいポートチェッカー：UPnP（対応ルーターが自動で通信の入口を開く仕組み）に対応し、Node接続に必要なポートを自動で開けるよう助ける。これまではNodeの運営者や、ローカルAIエージェント（自分のパソコン上で動くAIの助手）のようなSoloHostアプリの利用者が、手作業でルーターのポートを設定する必要があり、一部の人には技術的に難しかった。新しいポート確認用の仕組みとあわせて、パイオニアの携帯端末とNode上で動くアプリの間のような、ローカル機器同士の接続の設定が簡単になる</li><li>未掲載のSoloHostアプリへの対応：パイオニアが、SoloHostにまだ公開掲載されていないアプリを、自分の判断で選んで動かせるようになった。アプリがまだ公開されていない段階でも、開発者がテストや到達確認をしやすくなる</li><li>SoloHostアプリの状態管理：開発者がSoloHostアプリを、下書き（ドラフト）、未掲載、掲載済みの3つの状態で管理できるようになった。公開前後の見せ方や段階を、より細かく制御できる</li><li>SoloHostアプリの状態表示の不具合修正：SoloHostアプリを起動した後、Pi Desktop内の別の画面に移動して戻ると、アプリの状態が正しく表示されないことがあった表示上の問題を直した。画面がアプリの現在の状態を追い、正しく反映するよう改善した</li><li>アプリタブへの正しい移動：SoloHostアプリのインストールが終わって動き始めた後に、Pi Desktopがアプリタブへ正しく切り替わるようになった。以前のように起動の途中で切り替わることはない</li><li>注目のSoloHostアプリの追加：下で詳しく述べる分散コンピューティング用の未掲載アプリがテストを終えたほか、mcp-atlassianとOpenClawの2つのSoloHostアプリが、Hermesと並んで注目（featured）欄に追加される</li></ul>
+<p>これらの更新により、NodeとSoloHostの体験はより簡単で、柔軟で、信頼できるものになる。ローカル接続を簡単にし、アプリ管理を改善し、より柔軟なアプリ開発とテストを支えることで、0.6.2は、AIエージェントやその他のローカルで動くサービスを含め、Pi Node上で動くアプリケーションの土台を強くし続ける。</p>
+<h2>SoloHostアプリを通じた分散コンピューティングのテスト</h2>
+<p>新しいNode 0.6.2の公開とあわせて、PiはSoloHostを通じた分散コンピューティング機能の最初のテストを、ボランティアのNode運営者5人とともに完了した。</p>
+<p>5人の参加者全員の機器が、SoloHostアプリを通じて自動で送られた計算タスク（計算の仕事）を無事に完了した。このテストでは、Piのコーディネーター（調整役）への接続、計算ジョブの受け取りと処理、結果の返信まで、実際の機器を通じた一連の流れが確認された。</p>
+<p>SoloHostは、Pi2Day 2026にベータ版（正式版前の試用版）として公開された、Pi Desktop上の開かれた、許可不要の枠組み（フレームワーク）である。開発者はここで、自分で運営するアプリやNode用の道具を作って掲載でき、パイオニアはそれを自分のパソコンで動かせる。最初の公開では、AIエージェントのようなローカルで動くアプリに対応していた一方、Piは、空いているNodeの資源を使う分散コンピューティングのアプリを可能にする取り組みを続けてきた。</p>
+<p>この分散コンピューティングの取り組みは、420,000を超えるPiの世界中のNodeネットワークが、分散型のAI学習や計算タスクを支えられるかを探った、以前の概念実証（アイデアが実際に動くか確かめる試み）のプロジェクトを土台にしている。SoloHostを通じて、その機能をさらに自動化し、規模を広げ、第三者の依頼者（クライアント）に実際に役立つ水準の実用性を提供することを目指す、本物のアプリとして完成させていく。参加するNodeは、空いている計算能力を実際的用途の資源に変える見返りとして、第三者の依頼者からPiで報酬を受け取れる。</p>
+<p>適したアプリケーションが空いているNode資源を使えるよう助けることで、SoloHostとそこに掲載されるアプリは、Pi Nodeを、AI関連のアプリケーションやその他の計算量の多い仕事のための実用的な計算の層（レイヤー）に変えることができる。同時に、パイオニアには、自分がすでに動かしているパソコンを通じて、こうした新しい生産の仕組みに直接貢献し、利益を得る方法が生まれる。</p>
+<p class="small"><a href="index.html">← 一覧へ戻る</a>／<a href="https://minepi.com/blog/pi-node-0-6-2/">原文（英語）</a></p>
+</main>
+</body>
+</html>
