@@ -24,6 +24,7 @@ a { color: #0b5cad; overflow-wrap: anywhere; }
 code { overflow-wrap: anywhere; }
 img { max-width: 100%; }
 .small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+input#q { width: 100%; box-sizing: border-box; padding: 10px 12px; font-size: 1rem; border: 1px solid #c9ced6; border-radius: 8px; background: #fff; color: inherit; margin: 4px 0 10px; }
 @media (prefers-color-scheme: dark) {
   body { background: #121212; color: #e8e8e8; }
   main { background: #1a1a1a; }
@@ -34,6 +35,7 @@ img { max-width: 100%; }
   .note { background: #2b2410; border-color: #8a7420; }
   a { color: #7cc4ff; }
   .small { color: #a8a8a8; }
+  input#q { background: #242424; border-color: #3d3d3d; }
 }
 </style>
 </head>
@@ -42,6 +44,10 @@ img { max-width: 100%; }
 <h1>Pi Network 公式ブログ 日本語まとめ（2025年以降）</h1>
 <p>Pi Networkの公式ブログ（英語）に2025年以降に掲載された記事を、平たい日本語の要約で読めるようにしたページである。全部で87件の記事を、公式ブログと同じように「一覧から記事ごとのページへ」という構成で並べている。</p>
 <div class="note"><p>各記事のページは要約であり、全文の翻訳ではない。数字や日付などの事実は原文どおりに残してあるが、正確な表現は各ページからリンクしている原文（英語）を確認してほしい。原文：<a href="https://minepi.com/blog/">Pi Network Blog</a></p></div>
+<h2>キーワード検索</h2>
+<p class="small">日本語で入力すると、タイトルと要約文から探します。英語で入力すると、原文（英語）に出てくる言葉からも探します。</p>
+<input id="q" type="search" placeholder="キーワードを入力（例：ousd、移行、KYC）" autocomplete="off">
+<div id="sres"></div>
 <h2>2026年11月</h2>
 <div class="tw"><table>
 <tr><td style="white-space:nowrap">11月18日</td><td><a href="2026-11-18-pi-ecosystem-summit-2.html">エコシステム・サミット2日目：AIと人の参加をつなぐ新しい仕組み</a><br>サミット2日目は、人の判断をAIの仕事につなぐPi DataLabの初公開、SoloHostのAI支援、CiDi Gamesの技術デモを紹介した回である。</td></tr>
@@ -199,6 +205,44 @@ img { max-width: 100%; }
 <tr><td style="white-space:nowrap">1月31日</td><td><a href="2025-01-31-kyc-name-mismatch-and-phone-number-typo.html">KYCで名前が合わない場合の対応と、電話番号の小さな打ち間違いの直し方</a><br>KYCで名前が一致せず却下された人への再提出などの対応と、電話番号の最大2桁までの打ち間違いを直せる更新が公開されたという発表である。</td></tr>
 </table></div>
 <p class="small">対象期間：2025年1月1日〜2026年11月20日に公式ブログへ掲載された記事。生成：モコ（Muse）／ Muse Spark 1.3</p>
+<script>
+(function(){
+  var q = document.getElementById('q'), res = document.getElementById('sres'), IDX = null, loading = false;
+  function esc(s){ return (s||'').replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+  function load(){
+    if (IDX || loading) return;
+    loading = true;
+    fetch('search_index.json').then(function(r){ return r.json(); }).then(function(d){
+      IDX = d.map(function(e){ e._hay = (e.j + ' ' + e.e + ' ' + e.o + ' ' + e.t).toLowerCase(); e._tok = new Set(e.w ? e.w.split(' ') : []); return e; });
+      run();
+    }).catch(function(){ res.innerHTML = '<p class="small">検索データを読み込めませんでした。</p>'; });
+  }
+  function hit(e, words){
+    return words.every(function(w){
+      if (e._hay.indexOf(w) >= 0) return true;
+      if (e._tok.has(w)) return true;
+      if (w.length >= 3) { for (var t of e._tok) { if (t.indexOf(w) === 0) return true; } }
+      return false;
+    });
+  }
+  function run(){
+    var v = q.value.trim().toLowerCase();
+    if (!v) { res.innerHTML = ''; return; }
+    if (!IDX) { load(); res.innerHTML = '<p class="small">読み込み中…</p>'; return; }
+    var words = v.split(/\s+/);
+    var found = IDX.filter(function(e){ return hit(e, words); });
+    if (!found.length) { res.innerHTML = '<p class="small">見つかりませんでした。</p>'; return; }
+    var rows = found.map(function(e){
+      var d = e.d.split('-');
+      return '<tr><td style="white-space:nowrap">' + (+d[0]) + '年' + (+d[1]) + '月' + (+d[2]) + '日</td><td><a href="' + e.u + '">' + esc(e.j) + '</a><br>' + esc(e.o) + '</td></tr>';
+    }).join('');
+    res.innerHTML = '<p class="small">' + found.length + '件見つかりました。</p><div class="tw"><table>' + rows + '</table></div>';
+  }
+  q.addEventListener('input', run);
+  q.addEventListener('focus', load);
+})();
+</script>
+
 </main>
 </body>
 </html>
