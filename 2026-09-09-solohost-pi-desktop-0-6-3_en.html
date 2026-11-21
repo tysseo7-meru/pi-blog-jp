@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SoloHost Updates in Pi Desktop Version 0.6.3: Improved App Discovery, Reliability, and Developer Tools | Pi Network Official Blog — Plain-English Summaries (from 2025)</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+input#q { width: 100%; box-sizing: border-box; padding: 10px 12px; font-size: 1rem; border: 1px solid #c9ced6; border-radius: 8px; background: #fff; color: inherit; margin: 4px 0 10px; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+  input#q { background: #242424; border-color: #3d3d3d; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index_en.html">&larr; Back to the list</a></p>
+<h1>SoloHost Updates in Pi Desktop Version 0.6.3: Improved App Discovery, Reliability, and Developer Tools</h1>
+<div class="meta">
+<p>Published: September 9, 2026</p>
+<p>Categories: developer, update</p>
+<p><a href="https://minepi.com/blog/solohost-pi-desktop-0-6-3/">Original article</a></p>
+</div>
+<div class="note"><p>This page is a plain-English summary of an article from the official Pi Network blog. It is not a full translation. Difficult words and expressions are explained in simple words. For the exact wording, see the <a href="https://minepi.com/blog/solohost-pi-desktop-0-6-3/">original article</a>.</p></div>
+<p>An update to SoloHost (a system that lets you install and run self-operated apps from Pi Desktop) has been released together with Pi Desktop version 0.6.3. The contents are improvements to app discovery and management, improvements to app stability, and improvements to the developer tools for building SoloHost apps and examining problems.</p>
+<p>Note that from version 0.6.3, these releases will be called Pi Desktop versions, not Pi Node versions.</p>
+<h2>SoloHost updates included in Pi Desktop 0.6.3</h2>
+<ul><li>Ranking of SoloHost apps based on the number of people running them: community SoloHost apps are now ranked based on the number of people currently running that app. This makes active community apps stand out within SoloHost, and makes it easier for Pioneers (Pi users) to find apps that other people are actually using</li><li>A new &quot;My Apps&quot; section: a new &quot;My Apps&quot; section has been added to the SoloHost home screen, showing the apps the current user has published. Developers and publishers gain a dedicated place to find and manage their own SoloHost apps</li><li>SoloHost app readiness checks (readiness probes): a readiness check confirms the state of a SoloHost app and helps avoid the 502 errors (a kind of server-side response error) that sometimes occur due to connection and similar problems. This lets SoloHost judge better whether an app is ready and responding correctly, and raises the stability of the app experience</li><li>Improved Docker Compose support for examining problems: technical users who want to work on the command line (the screen where you type commands as text) can move to the installation folder and run the standard docker compose up and docker compose down commands outside SoloHost. This gives another way to try starting and stopping containers (boxes that run apps in isolation) and to examine problems when needed</li><li>A new SoloHost developer contract: the first SoloHost repository (a place where files are kept) has been prepared to help developers build SoloHost apps. This repository is in a form that AI agents (systems where AI works autonomously) can understand easily, so AI can help developers create SoloHost apps more effectively</li><li>Bug fixes: a fix to the SoloHost login token and a fix to the display of long image names are included</li></ul>
+<p>In the fix to the SoloHost login token, a problem was fixed where, if Pi Desktop was left running for many days, the SoloHost login token (a code showing the login state) would expire. In the fix to the display of long image names, a display problem where long image names overflowed the display frame was fixed, so they now wrap correctly. In the original article, these two fixes are explained twice: once in the list, and again in more detail right after it.</p>
+<p>Taken together, these updates make SoloHost stronger as the number of self-operated apps in the ecosystem grows. If apps become easier to find and more stable, Pioneers can find and run useful apps more easily, and if there are new developer materials and problem-examining options, developers can keep building apps for SoloHost easily.</p>
+<p>These improvements support SoloHost&#x27;s larger role of widening the usefulness of Pi Desktop and nodes (computers that support the network) beyond the blockchain foundation. They give Pioneers more ways to use their own computers for self-operated apps, and give developers more tools to build apps and bring them into SoloHost.</p>
+<p class="small"><a href="index_en.html">&larr; Back to the list</a> / <a href="https://minepi.com/blog/solohost-pi-desktop-0-6-3/">Original article</a></p>
+<p class="small">Japanese version: <a href="2026-09-09-solohost-pi-desktop-0-6-3.html">日本語のまとめ</a></p>
+</main>
+</body>
+</html>

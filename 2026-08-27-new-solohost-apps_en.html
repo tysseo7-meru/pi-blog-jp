@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Featuring New SoloHost Apps: OpenClaw and Atlassian MCP Server | Pi Network Official Blog — Plain-English Summaries (from 2025)</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+input#q { width: 100%; box-sizing: border-box; padding: 10px 12px; font-size: 1rem; border: 1px solid #c9ced6; border-radius: 8px; background: #fff; color: inherit; margin: 4px 0 10px; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+  input#q { background: #242424; border-color: #3d3d3d; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index_en.html">&larr; Back to the list</a></p>
+<h1>Featuring New SoloHost Apps: OpenClaw and Atlassian MCP Server</h1>
+<div class="meta">
+<p>Published: August 27, 2026</p>
+<p>Categories: developer, update</p>
+<p><a href="https://minepi.com/blog/new-solohost-apps/">Original article</a></p>
+</div>
+<div class="note"><p>This page is a plain-English summary of an article from the official Pi Network blog. It is not a full translation. Difficult words and expressions are explained in simple words. For the exact wording, see the <a href="https://minepi.com/blog/new-solohost-apps/">original article</a>.</p></div>
+<p>The OpenClaw and Atlassian MCP Server apps are now featured in SoloHost in Pi Desktop (a system that makes it easy to install and run self-hosted apps, meaning apps you run yourself). This widens the range of useful software that users can install and run more easily on their own computers.</p>
+<p>These two apps, released together with Node version 0.6.2, show that SoloHost can support different needs: from AI agents that run in your own place (a setup where AI does work on its own) to more specialized AI-connected workflows.</p>
+<p>With SoloHost, users can find, evaluate, install, and run self-hosted apps through Pi Desktop, without having to set up the technical base behind them — servers or Docker (a system for running apps in isolation) — in fine detail by hand. OpenClaw is an AI agent that runs in your own place. It can run on a local model, or on outside models such as ChatGPT and Claude. The Atlassian MCP Server app, on the other hand, provides a locally run MCP server, for connecting supported AI tools with Jira, which organizes workflows.</p>
+<h2>OpenClaw on SoloHost: local AI that is simpler and more closed off</h2>
+<p>OpenClaw is an AI agent that runs in your own place: it runs on the user&#x27;s own computer and helps with their work. On a computer that meets the performance requirements for running an agent on a local AI model, OpenClaw lets users control more strongly how it works with their data and computing environment, and can reduce dependence on distant infrastructure for supported tasks. If, instead, a cloud model such as Claude or ChatGPT is used, the requests sent to that model are processed on the model provider&#x27;s infrastructure. In either setup, OpenClaw&#x27;s memory is created and stored on the user&#x27;s computer.</p>
+<p>When OpenClaw runs through SoloHost, it runs inside a container (a box that runs an app in isolation), designed to limit standard access to the wider computer. Compared with installing it directly outside SoloHost, where it may by default be given wider access to the whole computer, such as the local file system, this is a more closed setup: whether the configured model is local or in the cloud, there is less exposure of unrelated local files and system resources.</p>
+<p>This closed setup does not remove all risk, and it does not cancel permissions that the user clearly gave. If a user allows OpenClaw to access outside services or resources, the agent can still act within the scope of that permission. The benefit of the SoloHost setup is more specific: it limits unnecessary default access to other parts of the user&#x27;s own computer, while letting the user give the clear permissions needed for a specific task.</p>
+<p>SoloHost also makes setting up OpenClaw simple. It automatically packages the app and the environment it needs so they can be used through Pi Desktop, reducing the amount of setup that users would otherwise have to handle by hand.</p>
+<p>With OpenClaw added, alongside Hermes, an already released AI agent that runs in your own place, the choices of locally running AI agents available through Pi Desktop have widened. OpenClaw puts weight on being a personal helper connected to tools and the whole messaging path, while Hermes puts more weight on lasting memory and learning skills from experience.</p>
+<h2>Atlassian MCP Server on SoloHost: connecting AI workflows with Jira</h2>
+<p>The Atlassian MCP Server on SoloHost meets more specialized needs: developers, product teams, and other professionals who want to build AI tools into their own Jira workflows.</p>
+<p>For AI tools to work with a service like Jira, there needs to be a way for the two systems to communicate. The Model Context Protocol, or MCP (a set of rules for connecting AI tools with outside systems), provides a framework for supported AI tools to connect, through an MCP server, to outside systems such as Jira.</p>
+<p>Atlassian (Jira) offers its own hosted MCP option. But when teams use it for internal AI-connected Jira workflows, they may hit limits (quotas) or stability restrictions. The SoloHost app here meets the needs of teams that hit such limits: it lets users run their own MCP server in their own place, without being limited by quota or stability problems.</p>
+<p>Specifically, with the Atlassian MCP Server on SoloHost, the user&#x27;s own computer, or a machine of their choice, can run the server locally. AI tools that support MCP connect through that local server and can work in Jira. Because the connection is based on MCP rather than on a specific AI system, it can work with different MCP-supporting AI tools, such as Cursor, Claude Desktop and Claude Code, and Codex. This can make organizing work in Jira more automatic and smarter.</p>
+<h2>Expanding SoloHost&#x27;s usefulness for Pioneers and the Pi ecosystem</h2>
+<p>OpenClaw and the Atlassian MCP Server show that SoloHost can support different kinds of self-hosted software for different user needs, from AI agents that run in your own place to more specialized developer tools.</p>
+<p>This gives Pioneers (Pi users) more ways to use their own computers for local AI, easier access to other self-hosted apps, and widens the usefulness of Pi Desktop and Nodes (computers that support the network) beyond the blockchain base. Through SoloHost, people can receive the benefits of AI while keeping more of their data and computing on their own devices, and reducing dependence on third-party distant infrastructure.</p>
+<p>At the same time, these two apps show that developers can build various tools and bring them into the Pi ecosystem, where they can reach more than 420,000 Pi Node operators and a larger number of Desktop users.</p>
+<p>As the number of self-hosted apps grows, SoloHost can keep expanding the role of Pi Desktop as a system for practical tools, and increase the ways users can benefit from the computing resources they already run.</p>
+<p>SoloHost is still in beta (a trial version) and uses a permissionless release flow. Users should evaluate each package (a complete set of an app) and install it at their own responsibility.</p>
+<p class="small"><a href="index_en.html">&larr; Back to the list</a> / <a href="https://minepi.com/blog/new-solohost-apps/">Original article</a></p>
+<p class="small">Japanese version: <a href="2026-08-27-new-solohost-apps.html">日本語のまとめ</a></p>
+</main>
+</body>
+</html>

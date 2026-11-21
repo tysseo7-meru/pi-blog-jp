@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pi Adds New Developer Capabilities and Releases New Documentation For Developers | Pi Network Official Blog — Plain-English Summaries (from 2025)</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+input#q { width: 100%; box-sizing: border-box; padding: 10px 12px; font-size: 1rem; border: 1px solid #c9ced6; border-radius: 8px; background: #fff; color: inherit; margin: 4px 0 10px; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+  input#q { background: #242424; border-color: #3d3d3d; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index_en.html">&larr; Back to the list</a></p>
+<h1>Pi Adds New Developer Capabilities and Releases New Documentation For Developers</h1>
+<div class="meta">
+<p>Published: September 4, 2026</p>
+<p>Categories: developer, update</p>
+<p><a href="https://minepi.com/blog/dev-capabilities-documentation/">Original article</a></p>
+</div>
+<div class="note"><p>This page is a plain-English summary of an article from the official Pi Network blog. It is not a full translation. Difficult words and expressions are explained in simple words. For the exact wording, see the <a href="https://minepi.com/blog/dev-capabilities-documentation/">original article</a>.</p></div>
+<p>Pi introduced new features for developers building on Pi. They are support for local storage (storage on the user&#x27;s device), access to staking data for each app in Ecosystem Directory Staking (the system for staking in the list of Pi apps), and sharing of files and videos. Pi&#x27;s new developer documentation was also released. The technical materials are now gathered in one place, and the path from getting started to building and publishing an app is clearer.</p>
+<p>Together, these updates widen the tools developers can use. They also improve the documentation and the guidance for taking part that support development on Pi.</p>
+<h2>Support for local storage (storage on the device)</h2>
+<p>Pi added support for local storage in the Pi Browser, at first for some apps on an allow list (a list of apps that are allowed; also called a whitelist). This lets those apps keep certain data directly on a Pioneer&#x27;s (a Pi user&#x27;s) device. This is one way Pi reduces the cost and effort of building on the network.</p>
+<p>Settings, session state (the state while you are using an app), and other data that fits local storage can be kept on the device. Developers do not need to store and deliver that data from their own back-end system (the system behind the app that users do not see). This helps reduce the related base costs.</p>
+<p>The Pi Browser manages this data for the app. The contents are not sent to Pi&#x27;s servers and stay on the Pioneer&#x27;s device, so that data stays private on the device. This support is designed to give a more consistent storage experience on both iOS and Android. Because the data is stored on the device, it stays tied to a specific account and device. It does not follow the user across devices on its own.</p>
+<p>To use this feature, an app must first be on the allow list. In the current system, apps on the allow list share a limited storage space on the device. When that storage space becomes full, old data may be removed. For that reason, local storage is not meant to be used as a place where storage is guaranteed to last forever. Turning the feature on app by app adds extra care and limits to its first use. It also lets Pi check performance and storage behavior across devices, storage conditions, and real patterns of use.</p>
+<h2>Staking Data API</h2>
+<p>Pi also introduced a Staking Data API (a way for outside programs to get data). With it, developers can see the effective amount that users have staked (Pi put in to support an app) for their app through the Ecosystem Directory Staking feature. The effective stake takes into account both the amount of Pi staked and an extra amount based on how long it was staked.</p>
+<p>This API returns a user&#x27;s effective stake only for the app that asked for it. So developers can get staking information for each app and build it into their own app.</p>
+<p>Access to this API also requires, at first, that the app that asks is on the allow list. This helps make sure that trials and opinions from developers and Pioneers in the first period can help guide how the API develops in the future.</p>
+<h2>File and video sharing feature</h2>
+<p>Developers can now use Pi.shareFile to let users share files, including videos, from their apps.</p>
+<p>This gives developers one more feature they can build into apps that need a file-sharing feature, and it supports a wider range of app experiences. Examples of use include a marketplace app (an app for buying and selling) where a Pioneer shares a receipt or images of an item in a dispute, and a game or content app where a user shares an image or a video clip directly from the app. By using the sharing feature that is already on the phone, developers can add these experiences without building a separate sharing flow themselves.</p>
+<h2>Release of improved developer documentation</h2>
+<p>Pi&#x27;s new developer documentation was released. The materials for developers building on Pi are now gathered in one place, and the developer experience was improved.</p>
+<p>Before, Pi&#x27;s developer documentation was split across several places. These included the SDK documentation (documentation for a set of development parts), the Community Developer Guide, and a GitHub documentation repository (a place where files are stored). Materials sometimes overlapped. Developers who came in through different Pi web pages or other routes could reach different sources of information.</p>
+<p>The new site gathers the developer documentation on one domain owned by Pi (a site address), and reorganizes it along the developer&#x27;s path. Developers can follow a clearer path, from getting started and registering an app, through development in a sandbox (an environment for testing), adding Pi features, and preparing an app for publication.</p>
+<p>In addition to the reorganization, the new documentation also adds more detail and explanations about parts of the system that community developers had said were unclear before. As a way to get started with Pi development, the documentation covers account and app registration, sandbox setup, SDK and system references, identity verification and payments, and the path from sandbox development to Mainnet (the real, live network) and publication. It also introduces AI guidance for adding identity verification and payments.</p>
+<p>The documentation has been reviewed against how the current system works. It helps developers use one up-to-date source of information when they build.</p>
+<h2>Supporting development across the whole Pi ecosystem</h2>
+<p>Developer tools are an important part of Pi&#x27;s larger focus on usefulness, because they directly affect the kinds of apps and services developers can create on Pi. Local storage, staking data for each app, and file sharing each add parts that developers can build into their apps. Clearer documentation and guidance, gathered in one place, make it easier to understand and put into practice the features available in Pi&#x27;s developer system.</p>
+<p>Supporting developers is essential to widen usefulness at the app level. Developers create products, services, and experiences that give Pioneers more ways to take part in the Pi ecosystem. Improving the base development environment helps turn Pi&#x27;s technical features and ecosystem resources into apps that Pioneers can use.</p>
+<p>As the Pi ecosystem keeps supporting a wider range of apps, these improvements to developer tools and documentation help lower the real barriers when developers keep building apps in the Pi ecosystem.</p>
+<p class="small"><a href="index_en.html">&larr; Back to the list</a> / <a href="https://minepi.com/blog/dev-capabilities-documentation/">Original article</a></p>
+<p class="small">Japanese version: <a href="2026-09-04-dev-capabilities-documentation.html">日本語のまとめ</a></p>
+</main>
+</body>
+</html>

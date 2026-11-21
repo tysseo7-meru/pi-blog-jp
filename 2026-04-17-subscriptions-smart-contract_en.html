@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Introducing Subscription Smart Contract Capability on Testnet | Pi Network Official Blog — Plain-English Summaries (from 2025)</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+input#q { width: 100%; box-sizing: border-box; padding: 10px 12px; font-size: 1rem; border: 1px solid #c9ced6; border-radius: 8px; background: #fff; color: inherit; margin: 4px 0 10px; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+  input#q { background: #242424; border-color: #3d3d3d; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index_en.html">&larr; Back to the list</a></p>
+<h1>Introducing Subscription Smart Contract Capability on Testnet</h1>
+<div class="meta">
+<p>Published: April 17, 2026</p>
+<p>Categories: announcement, developer</p>
+<p><a href="https://minepi.com/blog/subscriptions-smart-contract/">Original article</a></p>
+</div>
+<div class="note"><p>This page is a plain-English summary of an article from the official Pi Network blog. It is not a full translation. Difficult words and expressions are explained in simple words. For the exact wording, see the <a href="https://minepi.com/blog/subscriptions-smart-contract/">original article</a>.</p></div>
+<p>Pi Network has started supporting subscriptions on Pi Testnet (the test network) as its first smart contract (a program that runs automatically when conditions are met) feature.</p>
+<p>Subscriptions (regular payments) are one of the most common business models for services today, but they have been hard to build with blockchain (a technology that keeps transaction records in a shared form that is hard to change). By bringing subscriptions into its smart contract feature, Pi is growing real uses that connect directly to practical, often-used services, such as online shopping, video streaming, and online tools.</p>
+<p>This follows recent updates to nodes (computers that take part in the network) and protocols (the rules for communication and processing) that prepared the blockchain for the smart contract feature. It also follows the release of the Pi Testnet RPC server (a relay server that lets outside programs ask the blockchain questions), which gave developers a practical way to work with blockchain data and test app flows.</p>
+<p>To open the subscription smart contract to technical review and community comments, Pi published its second Pi Request for Comment, PiRC2 (a document that asks for comments on a design).</p>
+<p>Through PiRC2, developers and other reviewers can study the design in detail, find bugs or edge cases (unusual cases that are easy to miss) if there are any, and suggest improvements. It is also a way to judge the contracts across the whole system before they are rolled out to Mainnet (the live network).</p>
+<p>The smart contracts themselves are also being checked by an external audit service (an outside service that inspects the system for problems).</p>
+<h2>How the subscription smart contract works</h2>
+<p>The subscription smart contract gives developers and businesses a way to build regular-payment service models into apps and local commerce. Payments are processed through the blockchain, and subscribers keep control of their funds.</p>
+<p>An important part of the design is that a subscriber can approve a set budget that the contract may use, without having to sign again for each charge. That approval can also be limited to a set billing period, for example monthly charges for up to one year. At the same time, the approved funds stay in the wallet (a tool for storing digital assets) until a charge is actually processed. If the wallet has enough balance when a charge is due, the subscription stays active, without tying up the full budget in advance.</p>
+<p>This way, the contract can handle repeated payments without giving up the wallet-side control that blockchain systems are meant to protect, and without sending the total budget to the contract.</p>
+<h2>The technical approach</h2>
+<p>Subscriptions are not a new idea on blockchains, but until now they usually came with compromises on the blockchain side. For example, standard proposals for repeated payments have been made on other blockchains, but those methods generally came with compromises such as coordination off the chain, repeated approvals, or extra account infrastructure.</p>
+<p>Pi&#x27;s model takes a different approach. It is designed so that subscriptions work without a new signature for each charge, while the approved funds stay in the subscriber&#x27;s wallet until an actual charge happens. This is a meaningful design choice in Web3 (the idea of a decentralized web built on blockchains). In Web3, repeated payments have often been hard to do cleanly, without adding friction, prepayment, or extra infrastructure.</p>
+<h2>For developers: try subscriptions and review PiRC2</h2>
+<p>The subscription feature shows an early picture of how smart contracts on Pi will be developed and tested. At this stage, the focus is on technical review, finding bugs, and experiments with the command line (a screen where you type commands as text) and the backend (the processing that happens behind the scenes).</p>
+<p>Now that PiRC2 is published, developers are asked to review the design of the subscription contract, bring bugs and easy-to-miss edge cases to the surface, and suggest improvements.</p>
+<p>A footnote in the original explains that repeated subscriptions have also been explored on other blockchain systems, but they often added complexity. As examples, it notes that on Ethereum, EIP-1337 proposed &quot;on-chain subscriptions&quot; that store signed subscription data off the chain and submit it later for execution, and that ERC-4337 account abstraction (an idea that makes how accounts work more flexible) relies explicitly on higher-level smart account infrastructure.</p>
+<p class="small"><a href="index_en.html">&larr; Back to the list</a> / <a href="https://minepi.com/blog/subscriptions-smart-contract/">Original article</a></p>
+<p class="small">Japanese version: <a href="2026-04-17-subscriptions-smart-contract.html">日本語のまとめ</a></p>
+</main>
+</body>
+</html>

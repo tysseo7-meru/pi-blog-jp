@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Release of Pi Node Version 0.6.2 &amp; SoloHost Updates | Pi Network Official Blog — Plain-English Summaries (from 2025)</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif; margin: 0; background: #f6f7f9; color: #1a1d21; line-height: 1.7; overflow-x: hidden; }
+main { max-width: 980px; margin: 0 auto; padding: 24px 18px 64px; background: #fff; }
+h1 { font-size: 1.5rem; line-height: 1.4; }
+h2 { margin-top: 2.2em; border-bottom: 2px solid #e3e6ea; padding-bottom: .3em; font-size: 1.2rem; }
+h3 { margin-top: 1.6em; font-size: 1.05rem; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { border-collapse: collapse; width: 100%; min-width: 460px; margin: 1em 0; font-size: .86rem; }
+@media (max-width: 600px) { th, td { padding: 5px 5px; overflow-wrap: anywhere; } table { font-size: .8rem; min-width: 0; table-layout: fixed; } }
+th, td { border: 1px solid #d8dce1; padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f2f5; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.meta { background: #f0f2f5; border-radius: 8px; padding: 14px 18px; font-size: .92rem; }
+.meta p { margin: .3em 0; }
+.note { background: #fff8e6; border: 1px solid #f0d98c; border-radius: 8px; padding: 10px 16px; font-size: .9rem; }
+a { color: #0b5cad; overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
+img { max-width: 100%; }
+.small { font-size: .85rem; color: #555; overflow-wrap: anywhere; }
+input#q { width: 100%; box-sizing: border-box; padding: 10px 12px; font-size: 1rem; border: 1px solid #c9ced6; border-radius: 8px; background: #fff; color: inherit; margin: 4px 0 10px; }
+@media (prefers-color-scheme: dark) {
+  body { background: #121212; color: #e8e8e8; }
+  main { background: #1a1a1a; }
+  h2 { border-bottom-color: #3a3a3a; }
+  th, td { border-color: #3d3d3d; }
+  th { background: #262626; }
+  .meta { background: #242424; }
+  .note { background: #2b2410; border-color: #8a7420; }
+  a { color: #7cc4ff; }
+  .small { color: #a8a8a8; }
+  input#q { background: #242424; border-color: #3d3d3d; }
+}
+</style>
+</head>
+<body>
+<main>
+<p class="small"><a href="index_en.html">&larr; Back to the list</a></p>
+<h1>Release of Pi Node Version 0.6.2 &amp; SoloHost Updates</h1>
+<div class="meta">
+<p>Published: August 14, 2026</p>
+<p>Categories: developer, update</p>
+<p><a href="https://minepi.com/blog/pi-node-0-6-2/">Original article</a></p>
+</div>
+<div class="note"><p>This page is a plain-English summary of an article from the official Pi Network blog. It is not a full translation. Difficult words and expressions are explained in simple words. For the exact wording, see the <a href="https://minepi.com/blog/pi-node-0-6-2/">original article</a>.</p></div>
+<p>Version 0.6.2 of Pi Node (the software you run on a computer to support the Pi network) has been released. It includes improvements to SoloHost, Node connections, and the ease of use of Pi Desktop.</p>
+<p>In addition, Pi has successfully completed a test of distributed computing (splitting computing work among several computers) through a SoloHost app. Through this, the role of Pi Nodes expands beyond supporting the Pi blockchain (a system that manages transaction records in a distributed way).</p>
+<h2>Release of Pi Node 0.6.2</h2>
+<p>Version 0.6.2 includes the following updates.</p>
+<ul><li>Automatic port setup with UPnP and a new port checker: it now supports UPnP (a system where a compatible router automatically opens the entrance for communication) and helps open the ports needed for Node connections automatically. Until now, Node operators and users of SoloHost apps, such as local AI agents (AI assistants that run on your own computer), had to set their router ports by hand, which was technically difficult for some people. Together with the new port-checking system, setting up connections between local devices, such as between a Pioneer&#x27;s mobile device and an app running on a Node, becomes easier</li><li>Support for unlisted SoloHost apps: Pioneers can now choose, at their own judgment, to run apps on SoloHost that have not yet been publicly listed. Even while an app is not yet public, developers can test and check reachability more easily</li><li>State management for SoloHost apps: developers can now manage SoloHost apps in three states: draft, unlisted, and listed. They can control in more detail how an app is shown and staged before and after publication</li><li>Fix to a SoloHost app state display problem: there was a display problem where, after starting a SoloHost app, moving to another screen in Pi Desktop and coming back, the app&#x27;s state was sometimes not shown correctly. This has been fixed. The screen now follows the app&#x27;s current state and reflects it correctly</li><li>Correct movement to the app tab: after a SoloHost app finishes installing and starts running, Pi Desktop now switches correctly to the app tab. It no longer switches partway through startup, as before</li><li>Featured SoloHost apps added: in addition to the unlisted distributed computing app described in detail below, which finished its test, two SoloHost apps, mcp-atlassian and OpenClaw, will be added to the featured section, alongside Hermes</li></ul>
+<p>With these updates, the Node and SoloHost experience becomes simpler, more flexible, and more reliable. By making local connections easier, improving app management, and supporting more flexible app development and testing, 0.6.2 continues to strengthen the foundation for applications that run on Pi Nodes, including AI agents and other locally running services.</p>
+<h2>The distributed computing test through a SoloHost app</h2>
+<p>Together with the release of the new Node 0.6.2, Pi completed the first test of the distributed computing function through SoloHost, together with 5 volunteer Node operators.</p>
+<p>The devices of all 5 participants successfully completed computing tasks (computing jobs) that were sent automatically through the SoloHost app. In this test, the full flow through real devices was confirmed: connecting to Pi&#x27;s coordinator, receiving and processing computing jobs, and sending back the results.</p>
+<p>SoloHost is an open, permissionless framework (a basic structure anyone can join without approval) on Pi Desktop, released in beta (a trial version before the official release) at Pi2Day 2026. Developers can build and list self-run apps and tools for Nodes here, and Pioneers can run them on their own computers. While the first release supported locally running apps such as AI agents, Pi has continued work to enable distributed computing apps that use spare Node resources.</p>
+<p>This distributed computing effort is built on an earlier proof-of-concept project (a trial to check whether an idea actually works), which explored whether Pi&#x27;s worldwide Node network of more than 420,000 nodes can support decentralized AI training and computing tasks. Through SoloHost, the aim is to complete it as a real app that further automates the function, widens its scale, and provides a practical level of usefulness for third-party clients. Participating Nodes can receive rewards in Pi from third-party clients, in return for turning spare computing power into a resource for practical uses.</p>
+<p>By helping suitable applications use spare Node resources, SoloHost and the apps listed there can turn Pi Nodes into a practical computing layer for AI-related applications and other work that needs a lot of computing. At the same time, Pioneers gain a way to contribute directly to, and benefit from, these new production systems through the computers they already run.</p>
+<p class="small"><a href="index_en.html">&larr; Back to the list</a> / <a href="https://minepi.com/blog/pi-node-0-6-2/">Original article</a></p>
+<p class="small">Japanese version: <a href="2026-08-14-pi-node-0-6-2.html">日本語のまとめ</a></p>
+</main>
+</body>
+</html>
